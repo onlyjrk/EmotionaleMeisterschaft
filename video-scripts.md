@@ -273,6 +273,231 @@ Bis nächste Woche."
 
 ---
 
+---
+
+## VIDEO 4 — "Der Abwesende: Warum du seit Jahren nichts mehr fühlst"
+
+*Deep Dive in den zweiten Schatten-Typ. Zu drehen Woche 4.*
+
+**Titel-Optionen**:
+- "Der Abwesende: Warum du seit Jahren nichts mehr fühlst"
+- "Du bist nicht depressiv. Du bist abgeschaltet. (Der Unterschied.)"
+
+**Thumbnail-Text**: "ABGESCHALTET"
+**Kapitel**:
+- 00:00 Der Unterschied zwischen Depression und Abschaltung
+- 02:30 Wie Leere wirklich entsteht (Nervensystem)
+- 06:00 Warum Männer das besonders stark haben
+- 09:00 Die 3 Anzeichen, die keiner ernst nimmt
+- 12:30 Was du JETZT tun kannst (3 konkrete Schritte)
+- 15:30 Wann Sessions Sinn machen
+
+### Script
+
+**[00:00 — Hook]**
+
+"Die meisten Männer, die zu mir kommen und sagen 'ich glaub ich bin depressiv' — sind es nicht. Zumindest nicht klinisch.
+
+Sie sind abgeschaltet. Das ist was anderes.
+
+Depression ist ein Zustand von Schwere. Ein Abwärts-Druck. Du WILLST Sachen, schaffst sie nur nicht.
+
+Abschaltung ist anders. Du willst nicht mehr. Du fühlst nichts mehr besonders intensiv, weder positiv noch negativ. Du funktionierst. Und wenn du ehrlich bist: es ist dir egal.
+
+Das ist der Abwesende-Schatten. Und in den nächsten 15 Minuten zeig ich dir, wo der herkommt, warum Männer das besonders oft haben, und was du dagegen tun kannst — ohne dass du sofort zu mir in Sessions musst."
+
+**[02:30 — Wie Leere entsteht — Polyvagal-Theorie in einfach]**
+
+"Dein Nervensystem hat drei Modi. Das hat Stephen Porges — Neurowissenschaftler — Polyvagal-Theorie genannt.
+
+**Modus 1**: Ventral-vagal. Du bist verbunden, entspannt, kannst mit Leuten sein, spürst dich.
+
+**Modus 2**: Sympathisch. Kampf oder Flucht. Adrenalin, Wut, Panik.
+
+**Modus 3**: Dorsal-vagal. Wenn weder Kampf noch Flucht geht, schaltet das System ab. Das ist der Abwesende.
+
+Du denkst, du bist 'emotional kühl' oder 'rational'. In Wahrheit ist dein Nervensystem in Shutdown. Das ist kein Charakter. Das ist Physiologie.
+
+Und das Entscheidende: Dein System hat das gelernt. Meistens in den ersten 10 Jahren. Wenn du als Kind in eine Situation kamst, die zu überwältigend war — chaotische Familie, Eltern die dauerhaft gestresst waren, Gewalt, emotionale Abwesenheit — und du konntest nicht kämpfen, nicht fliehen — dann hat dein System gelernt: 'Wenn ich mich abschalte, überlebe ich.'
+
+Das war damals genial. Heute kostet's dich dein Leben."
+
+**[06:00 — Warum Männer das besonders haben]**
+
+"Drei Gründe, warum Männer das besonders oft zeigen:
+
+**Eins: Erziehung.** Männer lernen früh: Gefühle sind schwach. Weinende Jungs werden ausgelacht. Ängstliche werden abgehärtet. Das Abschalten wird als Stärke reframed.
+
+**Zwei: Keine Sprache.** Frauen haben meistens ein größeres emotionales Vokabular, weil es ihnen mehr erlaubt wurde. Männer kennen oft nur 3 Gefühle: gut, schlecht, okay. Das reicht nicht, um abgeschaltete Zonen wieder einzuschalten.
+
+**Drei: Leistungskultur.** Du funktionierst gut mit Abschaltung. Du arbeitest mehr, trainierst härter, bist 'ruhiger' in Stress-Situationen. Die Welt belohnt dich dafür. Niemand fragt, was das kostet."
+
+**[09:00 — Die 3 Anzeichen]**
+
+"Hier sind 3 Anzeichen, an denen du erkennst, dass du im Abwesenden steckst:
+
+**Eins: Sex fühlt sich mechanisch an.** Nicht schlecht, nicht gut — Funktion. Du hast eine Erektion, du kommst, aber da ist keine Welle, kein 'Oh'. Das ist ein enormes Signal. Der Körper ist erreichbar, das System nicht.
+
+**Zwei: Musik bewegt dich nicht mehr.** Früher hast du bei bestimmten Songs was gespürt. Jetzt hörst du sie, nickst, gehst weiter. Das ist kein Erwachsen-Werden. Das ist Abschaltung.
+
+**Drei: Dein eigener Geburtstag ist dir egal.** Oder Weihnachten. Oder das Geschenk, das deine Partnerin sich ausgedacht hat. Du kannst gar nicht erklären warum — es kommt einfach nichts."
+
+**[12:30 — 3 Schritte die du JETZT machen kannst]**
+
+"**Schritt 1: Micro-Dosing Sensation.**
+Jeden Tag 2 Minuten Kontakt mit Intensität. Kalt duschen. Barfuß auf Stein gehen. Etwas sehr Scharfes essen. Dein System muss wieder lernen, dass Empfindung nicht gefährlich ist. Klein anfangen.
+
+**Schritt 2: Körperscanning ohne Ziel.**
+Abends 5 Minuten hinlegen und von Fuß zu Kopf durch den Körper scannen. NICHT entspannen. NICHT was reparieren. Nur: was spüre ich gerade, ist da Enge, ist da Temperatur, ist da Taubheit? Das ist die erste Schicht, um den dorsal-vagalen Shutdown zu lösen.
+
+**Schritt 3: Trauer zulassen — in kleiner Dosis.**
+Wenn Leere da ist, ist fast immer ungelöste Trauer drunter. Meistens über was, das du nie wirklich trauern durftest. Ein Elternteil, das nie zugänglich war. Ein Freund, der gestorben ist und du musstest 'stark sein'. Eine Lebensphase, die verloren ist. 10 Minuten pro Woche die Erlaubnis geben, dass was da sein darf, ohne es wegzudrücken."
+
+**[15:30 — Wann Sessions]**
+
+"Schritt 1 und 2 kannst du allein. Schritt 3 ist der Punkt, wo's allein oft nicht geht. Weil Trauer, die jahrelang weggedrückt wurde, braucht einen Container. Einen Raum. Jemanden, der das hält.
+
+Das ist der Punkt, wo Session-Arbeit den größten Hebel hat. Nicht um Techniken zu lernen — sondern um das, was abgeschaltet wurde, wieder einzuschalten. In einer Umgebung, wo es sicher ist.
+
+Wenn du drei Anzeichen erkannt hast — und Schritt 1 und 2 seit 4 Wochen machst ohne Veränderung — dann ist ein Erstgespräch dran. Link in der Beschreibung.
+
+Nächste Woche: Case-Study. Ich zeig euch, wie so eine Wiedererweckung in Sessions konkret aussieht. Bis dahin."
+
+**[Cut]**
+
+---
+
+## VIDEO 5 — "Ein Muster, das ich nach 100 Sessions immer wieder sehe"
+
+*Case-Video statt namentliches Testimonial. Anonymisiert, typisches Muster.*
+
+**Titel-Optionen**:
+- "Ein Muster, das ich nach 100 Sessions immer wieder sehe"
+- "Was wirklich passiert, wenn ein Mann sich erlaubt zu weinen (nach Jahren)"
+
+**Thumbnail-Text**: "ERSTE TRÄNE"
+**Kapitel**:
+- 00:00 Warum ich keine Einzelfälle erzähle
+- 01:30 Das Muster: der "starke" Mann in der ersten Session
+- 05:00 Der Moment, an dem die Mauer fällt
+- 09:00 Was im Körper passiert (Polyvagal)
+- 12:00 Was danach anders ist
+- 15:00 Nein, das kommt nicht von selbst
+
+### Script
+
+**[00:00]**
+
+"Ich erzähl dir heute kein Einzel-Testimonial. Aus zwei Gründen:
+
+Erstens: Die Männer die zu mir kommen, sind in sensiblen Themen. Ich werde nie Namen nennen. Auch nicht anonymisiert in dem Sinne, dass irgendjemand sich selbst wiedererkennt.
+
+Zweitens, und das ist wichtiger: Einzelfälle sind manipulativ. 'Der eine Typ, der nach 2 Sessions sein Leben verändert hat' — ist immer überzeichnet, immer erzählerisch zurechtgebogen.
+
+Stattdessen erzähle ich dir ein Muster. Ein Muster, das ich in 100+ Sessions mit Männern immer wieder sehe. Wenn dieses Muster kommt, weiß ich: die richtige Arbeit beginnt. Und ich zeig dir in den nächsten 15 Minuten, wie das aussieht — und warum es nicht von selbst passiert."
+
+**[01:30 — Das Muster]**
+
+"Typische erste Session. Er sitzt vor mir, 35-45. Gut gekleidet oder nicht, egal. Er erklärt sein Problem. Meistens klar, strukturiert, fast als würde er einem Arzt einen Bericht geben: 'Meine Frau sagt X. Meine Arbeit ist Y. Ich fühl mich dabei Z.'
+
+Er ist nicht in Kontakt mit sich. Er ist in Kontakt mit seiner Story über sich.
+
+Das ist kein Problem. Das ist der Startpunkt. Fast jeder Mann kommt so.
+
+Meine Arbeit in den ersten 20 Minuten ist nicht, Lösungen zu finden. Sondern diesen Abstand zwischen ihm und sich zu verringern.
+
+Ich frag Sachen wie: 'Wo sitzt das gerade im Körper, während du mir das erzählst?' Die erste Antwort ist meistens: 'Gar nicht.' Oder: 'Ähm... im Kopf?'
+
+Das ist der Punkt. Er hat keinen Zugang. Nicht weil er dumm ist. Weil sein System das seit Jahren so eingestellt hat, um sich zu schützen."
+
+**[05:00 — Der Moment]**
+
+"Dann passiert irgendwann — meistens nicht in Session 1, sondern 2 oder 3 — ein Moment.
+
+Wir sind an einer konkreten Erinnerung. Nicht 'meine Kindheit im Allgemeinen', sondern eine spezifische Szene. Er erzählt die. Und irgendwann stellt er eine Frage, die er seit Jahrzehnten nicht gestellt hat. Oder er hört plötzlich, was er damals wirklich gespürt hat.
+
+Und dann kommt was. Meistens kurz. Eine Welle, dann trocken. Zwei Sekunden Stille. Die Augen werden rot. Keine Tränen noch — aber die Möglichkeit davon.
+
+Das ist der Moment. Nicht Heilung. Sondern Zugang.
+
+Die Stimme verändert sich. Die Haltung verändert sich. Er ist nicht mehr im Bericht. Er ist in sich."
+
+**[09:00 — Was im Körper passiert]**
+
+"Was physiologisch passiert: sein Nervensystem schaltet für einen Moment um. Vom dorsal-vagalen Shutdown — dem Abgeschaltet-Sein — in den ventral-vagalen Zustand. Oder kurz durch den sympathischen. Egal welcher Weg: es bewegt sich wieder.
+
+Das ist messbar. Herzraten-Variabilität verändert sich. Gesichtsmuskulatur verändert sich. Die Pupillen. Der Atem.
+
+Für ihn fühlt sich das manchmal beängstigend an. 'Das ist komisch.' 'Ich weiß nicht, was das war.' 'Mir ist schwindelig.'
+
+Meine Arbeit dann: signalisieren, dass das okay ist. Nicht interpretieren. Nicht erklären. Nur: begleiten. Halten.
+
+Das ist der eine Moment, für den Männer zu mir kommen — auch wenn sie das am Anfang nicht wissen."
+
+**[12:00 — Was danach anders ist]**
+
+"Was danach anders ist — und das ist kein Hype, das ist einfach, was ich immer wieder sehe:
+
+- **Schlaf.** Fast immer besser nach einer Session mit so einem Moment.
+- **Reizbarkeit.** Weniger. Weil eine Menge Druck raus ist.
+- **Klarheit.** Plötzlich wissen sie, was sie in einer Situation fühlen. Wo es vorher 'nichts' oder 'komisch' war.
+- **Beziehung.** Wenn der Partner da ist, merkt er es. Meistens sagt er nichts, aber er spürt, dass etwas offener ist.
+
+Nicht alles ist sofort fixed. Aber das Muster — der abgeschaltete Zustand, die Dauerroutine — hat eine Unterbrechung bekommen. Das ist der Anfang."
+
+**[15:00 — Nein, das kommt nicht von selbst]**
+
+"Letzter Punkt, und der ist hart: Dieser Moment kommt NICHT von selbst.
+
+Ich hab Männer erlebt, die 5, 10, 15 Jahre in klassischer Sprech-Therapie sind, ohne dass diese Öffnung je passiert. Weil die Methode andere Prioritäten hat. Und das ist okay für manche Themen.
+
+Für das — wenn du merkst, du bist abgeschaltet, und du weißt es seit Jahren — brauchst du eine direktere Arbeit. Mit jemandem, der sich nicht scheut, mit dir da reinzugehen.
+
+Das mache ich. Das machen andere auch. Wenn du merkst, dass dieses Video dich trifft, und du willst wissen, ob meine Art zu arbeiten zu dir passt — Erstgespräch-Link in der Beschreibung.
+
+Nächste Woche: der dritte Schatten. Der Ungenügende — wenn du für Liebe performst und es nie reicht. Bis dahin."
+
+**[Cut]**
+
+---
+
+## VIDEO 6 — "Der Ungenügende: Wenn du für Liebe performst (und es nie reicht)"
+
+*Der dritte Schatten im Deep Dive.*
+
+**Titel-Optionen**:
+- "Der Ungenügende: Wenn du für Liebe performst (und es nie reicht)"
+- "Warum du immer mehr leistest — und immer noch nicht genug fühlst"
+
+**Thumbnail-Text**: "NIE GENUG"
+**Kapitel**:
+- 00:00 Der Satz, den jeder Ungenügende heimlich denkt
+- 02:30 Wo das herkommt (Bindungstheorie)
+- 06:00 Warum Leistung keine Lösung ist
+- 09:00 Der Unterschied zu 'people pleasing'
+- 12:00 Was dich wirklich löst (und was nicht)
+- 15:30 Session-Arbeit für diesen Typ
+
+### Script — Kurz-Version
+
+**[00:00]** "Es gibt einen Satz, den fast jeder Ungenügende heimlich in sich trägt. Der Satz heißt: 'Wenn ich nur genug leiste, werde ich geliebt.' Du sprichst ihn nie aus. Aber er steuert alles..."
+
+**[02:30 — Bindungstheorie in einfach]** Bowlby, Ainsworth, sichere vs unsichere Bindung. "Ängstlich-vermeidender Bindungsstil bei Männern."
+
+**[06:00 — Warum Leistung nicht reicht]** Der Punkt an dem Leistung nie ankommt. Tryptophan-Nebenwirkung der Performanz-Kultur.
+
+**[09:00 — People Pleasing vs Ungenügender]** PP ist aktiv, will gefallen. Ungenügender ist struktureller: ich GLAUBE nicht, dass ich ohne Leistung liebenswert bin. Unterschied: PP kann aufhören wenn er die Gefahr erkennt. Ungenügender hat keine Alternative in seinem Selbst.
+
+**[12:00 — Was löst]** Nicht Selbstliebe-Affirmationen (die triggern den Schatten sogar mehr). Was wirklich löst: eine korrigierende emotionale Erfahrung. Jemand der dich sieht ohne dass du performst. Einmal, zweimal, dutzendmal. Bis dein System lernt: es ist möglich.
+
+**[15:30 — Session-Arbeit]** Direkt anwendbar: Therapeutische Beziehung als korrektive Erfahrung. Ohne dass du weißt was du sagen musst. Das ist was Sessions besser können als Selbsthilfe.
+
+**[Cut]**
+
+*Volle Version: Jurek, aus deiner Praxis-Erfahrung je Kapitel einen konkreten Absatz mit typischem Muster (ohne Namen) ergänzen. Die Struktur steht.*
+
+---
+
 ## Description-Template für JEDES Video
 
 ```
