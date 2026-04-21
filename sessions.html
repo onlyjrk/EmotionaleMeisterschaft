@@ -515,6 +515,14 @@
             .booking-price { font-size: 44px; }
         }
     </style>
+
+    <!-- Plausible Analytics — cookieless, GDPR-safe, EU-hosted -->
+    <script defer data-domain="neujahr.emotionalemeisterschaft.com"
+            src="https://plausible.io/js/script.tagged-events.outbound-links.js"></script>
+    <script>
+      window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) };
+      function trackCalendlyClick(type) { plausible('Calendly Click', { props: { source: 'sessions', type: type } }); }
+    </script>
 </head>
 <body>
 
@@ -700,7 +708,7 @@
                 <div class="booking-feature"><span class="check-icon">✓</span><span>Am Ende entscheidest DU, ob du weiter machst</span></div>
             </div>
 
-            <a href="https://calendly.com/jurek-em/erstgespraech" target="_blank" class="btn btn-primary btn-lg" style="width: 100%; justify-content: center;">
+            <a href="https://calendly.com/jurek-em/erstgespraech" target="_blank" onclick="trackCalendlyClick('discovery_card')" class="btn btn-primary btn-lg plausible-event-name=Calendly+Click plausible-event-source=sessions_card" style="width: 100%; justify-content: center;">
                 Jetzt Termin wählen
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -779,7 +787,7 @@
             <p style="color: var(--white-muted); max-width: 600px; margin: 0 auto 40px; font-size: 17px;">
                 20 Minuten. Kostenlos. Ohne Bedingungen.
             </p>
-            <a href="https://calendly.com/jurek-em/erstgespraech" target="_blank" class="btn btn-primary btn-lg">
+            <a href="https://calendly.com/jurek-em/erstgespraech" target="_blank" onclick="trackCalendlyClick('discovery_footer')" class="btn btn-primary btn-lg plausible-event-name=Calendly+Click plausible-event-source=sessions_footer">
                 Erstgespräch buchen
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M5 12h14M12 5l7 7-7 7"/>

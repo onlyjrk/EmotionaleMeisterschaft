@@ -51,6 +51,13 @@ a{color:var(--gold);text-decoration:none}
 a:hover{text-decoration:underline}
 @media(max-width:520px){.card{padding:28px 22px}.intro-stats{gap:20px}.btn{padding:16px 28px;font-size:15px}}
 </style>
+
+<!-- Plausible Analytics — cookieless, GDPR-safe, EU-hosted -->
+<script defer data-domain="neujahr.emotionalemeisterschaft.com"
+        src="https://plausible.io/js/script.tagged-events.outbound-links.js"></script>
+<script>
+  window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) };
+</script>
 </head>
 <body>
 <div class="container">
@@ -104,7 +111,7 @@ a:hover{text-decoration:underline}
 <h2 style="font-size:22px;margin-top:32px;margin-bottom:16px">Die nächsten 3 Schritte</h2>
 <ol id="res-steps" style="color:var(--white-muted);padding-left:20px;font-size:17px;line-height:1.8"></ol>
 <div class="cta-group">
-<a href="/sessions.html" class="btn">1:1 Session — kostenloses Erstgespräch</a>
+<a href="/sessions.html" onclick="plausible('Session CTA Click', { props: { source: 'quiz_result' } })" class="btn plausible-event-name=Session+CTA+Click plausible-event-source=quiz_result">1:1 Session — kostenloses Erstgespräch</a>
 <a href="/" class="btn btn-outline">Mehr über den Kurs</a>
 </div>
 </div>
@@ -207,7 +214,7 @@ const results = {
 
 let state={qi:0,counts:{wut:0,leere:0,angst:0,kontrolle:0}};
 
-function startQuiz(){document.getElementById('intro').classList.add('hidden');document.getElementById('quiz').classList.remove('hidden');renderQuestion()}
+function startQuiz(){plausible('Quiz Start');document.getElementById('intro').classList.add('hidden');document.getElementById('quiz').classList.remove('hidden');renderQuestion()}
 
 function renderQuestion(){
  const q=questions[state.qi];
@@ -230,24 +237,47 @@ function selectAnswer(s){
 
 function showCapture(){document.getElementById('quiz').classList.add('hidden');document.getElementById('capture').classList.remove('hidden');window.scrollTo({top:0,behavior:'smooth'})}
 
+// ====== MailerLite Config — BEFORE GOING LIVE, replace these 2 placeholders ======
+const ML_ACCOUNT_ID = 'YOUR_ACCOUNT_ID'; // z.B. "1234567" — aus MailerLite Dashboard → Integrations → API
+const ML_FORM_ID = 'YOUR_FORM_ID';       // z.B. "987654321" — aus dem konkreten Formular in MailerLite
+// ===================================================================================
+
 function captureLead(e){
  e.preventDefault();
  const email=document.getElementById('email').value;
  const firstname=document.getElementById('firstname').value;
  const dominant=Object.entries(state.counts).sort((a,b)=>b[1]-a[1])[0][0];
- // Forward to Jureks email provider (placeholder — replace mailto: with Mailchimp/ConvertKit API endpoint)
- const payload={email,firstname,shadow_type:dominant,counts:state.counts,ts:new Date().toISOString()};
- try{
-  // Fire-and-forget to ConvertKit/Mailchimp/custom endpoint
-  fetch('/api/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)}).catch(()=>{});
-  // Fallback localStorage (dev/prototype)
-  localStorage.setItem('em_lead_'+Date.now(),JSON.stringify(payload));
- }catch(_){}
- showResult(dominant,firstname);
+
+ // Plausible: Track submission with shadow_type property
+ plausible('Email Submit', { props: { shadow_type: dominant } });
+
+ // MailerLite JSONP submission — subscribes the contact with fields email, name, shadow_type
+ // Learn: https://www.mailerlite.com/help/how-to-create-an-embedded-form
+ try {
+   const payload = {
+     fields: { email, name: firstname, shadow_type: dominant },
+     ml_subscribe_form: ML_FORM_ID,
+     anticsrf: true
+   };
+   const formData = new FormData();
+   Object.entries(payload.fields).forEach(([k, v]) => formData.append('fields[' + k + ']', v));
+   formData.append('ml-submit', '1');
+   fetch(`https://assets.mailerlite.com/jsonp/${ML_ACCOUNT_ID}/forms/${ML_FORM_ID}/subscribe`, {
+     method: 'POST',
+     body: formData,
+     mode: 'no-cors'
+   }).catch(() => {});
+ } catch(_) {}
+
+ // Fallback: keep a local backup so leads are not lost if ML misconfigured
+ try { localStorage.setItem('em_lead_'+Date.now(), JSON.stringify({email, firstname, shadow_type: dominant, ts: new Date().toISOString()})); } catch(_) {}
+
+ showResult(dominant, firstname);
  return false;
 }
 
 function showResult(type,firstname){
+ plausible('Quiz Complete', { props: { shadow_type: type } });
  const r=results[type];
  document.getElementById('capture').classList.add('hidden');
  document.getElementById('result').classList.remove('hidden');
