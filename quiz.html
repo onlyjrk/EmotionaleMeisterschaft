@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Welcher Schatten steuert gerade dein Leben? 8 Fragen. 2 Minuten. Klares Ergebnis plus der erste Schritt raus.">
+<title>Welcher Schatten steuert dich? | Emotionale Meisterschaft</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--black:#0a0a0f;--black-light:#12121a;--charcoal:#1a1a24;--gold:#d4a843;--gold-light:#e8c36a;--gold-dark:#a67c2e;--gold-glow:rgba(212,168,67,0.4);--gold-subtle:rgba(212,168,67,0.12);--ember:#c44536;--white:#f5f5f7;--white-muted:rgba(245,245,247,0.7);--white-dim:rgba(245,245,247,0.4);--font-display:'Cormorant Garamond',Georgia,serif;--font-body:'Outfit',-apple-system,sans-serif}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:var(--black);color:var(--white);line-height:1.6;min-height:100vh;-webkit-font-smoothing:antialiased;display:flex;align-items:center;justify-content:center;padding:24px;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;background:radial-gradient(circle at 50% 30%,var(--gold-glow) 0%,transparent 60%);opacity:0.25;pointer-events:none;filter:blur(80px)}
+.container{position:relative;z-index:2;width:100%;max-width:720px}
+.card{background:linear-gradient(180deg,var(--charcoal),var(--black-light));border:1px solid rgba(212,168,67,0.15);border-radius:8px;padding:clamp(32px,5vw,64px);box-shadow:0 40px 80px -20px rgba(0,0,0,0.5)}
+.label{font-size:11px;font-weight:700;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;display:inline-block}
+h1{font-family:var(--font-display);font-size:clamp(32px,5vw,56px);line-height:1.1;font-weight:500;margin-bottom:20px;letter-spacing:-0.01em}
+h1 em{font-style:italic;color:var(--gold);font-weight:400}
+h2{font-family:var(--font-display);font-size:clamp(24px,3.5vw,36px);line-height:1.2;font-weight:500;margin-bottom:16px}
+p{color:var(--white-muted);margin-bottom:16px;font-size:17px}
+.intro-stats{display:flex;gap:24px;margin:32px 0;padding:20px 0;border-top:1px solid rgba(212,168,67,0.12);border-bottom:1px solid rgba(212,168,67,0.12);justify-content:center;flex-wrap:wrap}
+.stat-val{font-family:var(--font-display);font-size:28px;color:var(--gold);display:block;line-height:1}
+.stat-lab{font-size:11px;text-transform:uppercase;letter-spacing:0.15em;color:var(--white-dim);margin-top:6px;display:block}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:18px 40px;font-family:var(--font-body);font-size:17px;font-weight:600;letter-spacing:0.02em;text-decoration:none;border-radius:2px;transition:all 0.3s;cursor:pointer;border:1px solid transparent;background:linear-gradient(135deg,var(--gold),var(--gold-dark));color:var(--black);box-shadow:0 10px 40px -10px var(--gold-glow);width:100%}
+.btn:hover{transform:translateY(-2px);box-shadow:0 20px 60px -10px var(--gold-glow)}
+.btn-outline{background:transparent;color:var(--gold);border-color:rgba(212,168,67,0.3)}
+.btn-outline:hover{background:var(--gold-subtle);border-color:var(--gold)}
+.btn-sm{padding:12px 24px;font-size:14px;width:auto}
+.progress{height:3px;background:rgba(212,168,67,0.1);border-radius:2px;margin-bottom:40px;overflow:hidden}
+.progress-bar{height:100%;background:linear-gradient(90deg,var(--gold-dark),var(--gold));transition:width 0.4s ease;width:0%}
+.q-counter{font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+.q-text{font-family:var(--font-display);font-size:clamp(24px,3vw,34px);line-height:1.25;margin-bottom:32px;font-weight:500}
+.answers{display:flex;flex-direction:column;gap:12px}
+.answer{padding:20px 24px;background:rgba(255,255,255,0.03);border:1px solid rgba(212,168,67,0.12);border-radius:2px;color:var(--white);font-size:16px;cursor:pointer;text-align:left;font-family:var(--font-body);transition:all 0.2s;line-height:1.5}
+.answer:hover{background:var(--gold-subtle);border-color:var(--gold)}
+.answer:active{transform:scale(0.99)}
+.form-group{margin-bottom:20px}
+.form-group label{display:block;font-size:12px;letter-spacing:0.15em;text-transform:uppercase;color:var(--white-dim);margin-bottom:8px}
+.form-group input{width:100%;padding:16px 20px;background:rgba(255,255,255,0.04);border:1px solid rgba(212,168,67,0.15);border-radius:2px;color:var(--white);font-family:var(--font-body);font-size:16px;transition:border 0.2s}
+.form-group input:focus{outline:none;border-color:var(--gold);background:rgba(255,255,255,0.06)}
+.fineprint{font-size:13px;color:var(--white-dim);margin-top:20px;text-align:center}
+.shadow-icon{font-size:64px;text-align:center;margin-bottom:8px;display:block;line-height:1}
+.result-type{text-align:center;margin-bottom:32px}
+.result-type .label{margin-bottom:12px;display:block}
+.cta-group{display:flex;flex-direction:column;gap:12px;margin-top:32px}
+.hidden{display:none}
+a{color:var(--gold);text-decoration:none}
+a:hover{text-decoration:underline}
+@media(max-width:520px){.card{padding:28px 22px}.intro-stats{gap:20px}.btn{padding:16px 28px;font-size:15px}}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="card" id="quiz-card">
+
+<!-- INTRO -->
+<div id="intro">
+<span class="label">Kostenloser Selbsttest</span>
+<h1>Welcher Schatten<br>steuert <em>dich</em> gerade?</h1>
+<p>8 Fragen. 2 Minuten. Am Ende weißt du, welcher innere Anteil gerade im Vordergrund deines Lebens arbeitet — und was der erste klare Schritt raus ist.</p>
+<div class="intro-stats">
+<div><span class="stat-val">4.800+</span><span class="stat-lab">Sessions</span></div>
+<div><span class="stat-val">HP</span><span class="stat-lab">Heilpraktiker Psychotherapie</span></div>
+<div><span class="stat-val">2 min</span><span class="stat-lab">Dauer</span></div>
+</div>
+<button class="btn" onclick="startQuiz()">Test starten</button>
+<p class="fineprint">Ehrlich antworten. Niemand sieht deine Antworten außer dir.</p>
+</div>
+
+<!-- QUIZ -->
+<div id="quiz" class="hidden">
+<div class="progress"><div class="progress-bar" id="bar"></div></div>
+<div class="q-counter" id="qnum">Frage 1 von 8</div>
+<div class="q-text" id="qtext"></div>
+<div class="answers" id="answers"></div>
+</div>
+
+<!-- CAPTURE -->
+<div id="capture" class="hidden">
+<span class="label">Letzter Schritt</span>
+<h2>Dein Ergebnis ist bereit.</h2>
+<p>Wo soll ich dir deine Auswertung schicken? Du bekommst eine ehrliche Einschätzung deines dominanten Schattens + 3 konkrete nächste Schritte. Kein Spam, kein Newsletter-Bombardement.</p>
+<form id="lead-form" onsubmit="return captureLead(event)">
+<div class="form-group"><label>Vorname</label><input type="text" id="firstname" required autocomplete="given-name"></div>
+<div class="form-group"><label>E-Mail</label><input type="email" id="email" required autocomplete="email"></div>
+<button class="btn" type="submit">Auswertung zeigen</button>
+<p class="fineprint">Kein Newsletter-Spam. Deine Daten sind sicher. <a href="https://emotionalemeisterschaft.com/agb-widerruf/" target="_blank">Datenschutz</a>.</p>
+</form>
+</div>
+
+<!-- RESULT -->
+<div id="result" class="hidden">
+<div class="result-type">
+<span class="shadow-icon" id="res-icon">🌑</span>
+<span class="label">Dein dominanter Schatten</span>
+<h2 id="res-title"></h2>
+<p id="res-desc" style="max-width:520px;margin:0 auto 24px"></p>
+</div>
+<h2 style="font-size:22px;margin-top:40px;margin-bottom:16px">Was das für dich bedeutet</h2>
+<p id="res-meaning"></p>
+<h2 style="font-size:22px;margin-top:32px;margin-bottom:16px">Die nächsten 3 Schritte</h2>
+<ol id="res-steps" style="color:var(--white-muted);padding-left:20px;font-size:17px;line-height:1.8"></ol>
+<div class="cta-group">
+<a href="/sessions.html" class="btn">1:1 Session — kostenloses Erstgespräch</a>
+<a href="/" class="btn btn-outline">Mehr über den Kurs</a>
+</div>
+</div>
+
+</div>
+</div>
+
+<script>
+const questions = [
+ {q:"Wie reagierst du, wenn jemand dich kritisiert oder angreift?",
+  a:[
+   {t:"Ich werde innerlich sofort heiß. Es kocht.", s:"wut"},
+   {t:"Ich schalte ab. Nichts mehr.", s:"leere"},
+   {t:"Ich überlege sofort, was ICH falsch gemacht habe.", s:"angst"},
+   {t:"Ich analysiere, wie ich die Situation wieder unter Kontrolle kriege.", s:"kontrolle"}]},
+ {q:"Was passiert nachts um 3, wenn du nicht schlafen kannst?",
+  a:[
+   {t:"Wut über jemanden oder etwas Bestimmtes — es kreist.", s:"wut"},
+   {t:"Ein großes Nichts. Als wäre ich nicht wirklich da.", s:"leere"},
+   {t:"Angst. Sorgen. Was wenn... was wenn... was wenn.", s:"angst"},
+   {t:"Pläne, To-Do-Listen, Szenarien durchspielen.", s:"kontrolle"}]},
+ {q:"Wenn du ehrlich bist — was vermeidest du in Beziehungen?",
+  a:[
+   {t:"Dass jemand mir zu nahe kommt und mich provoziert.", s:"wut"},
+   {t:"Ernsthafte Nähe überhaupt. Die strengt mich an.", s:"leere"},
+   {t:"Verlassen zu werden. Lieber gehe ich zuerst.", s:"angst"},
+   {t:"Kontrolle abzugeben. Mich wirklich fallen zu lassen.", s:"kontrolle"}]},
+ {q:"Als Kind warst du vermutlich der Junge, der...",
+  a:[
+   {t:"...öfter in Streit geraten ist oder sich gewehrt hat.", s:"wut"},
+   {t:"...sich irgendwann in seine Welt zurückgezogen hat.", s:"leere"},
+   {t:"...immer versucht hat, es allen recht zu machen.", s:"angst"},
+   {t:"...der vernünftige, erwachsene unter den Kindern war.", s:"kontrolle"}]},
+ {q:"Welchen Satz kennst du innerlich am besten?",
+  a:[
+   {t:"\"Lass mich in Ruhe.\"", s:"wut"},
+   {t:"\"Ist eh egal.\"", s:"leere"},
+   {t:"\"Ich bin nicht genug.\"", s:"angst"},
+   {t:"\"Ich muss das schaffen.\"", s:"kontrolle"}]},
+ {q:"Wenn du dich betäuben musst — womit?",
+  a:[
+   {t:"Adrenalin, Sport bis zur Erschöpfung, Konfrontation.", s:"wut"},
+   {t:"Netflix, Scrollen, Gaming — bis es dunkel wird.", s:"leere"},
+   {t:"Essen, Alkohol, alles womit ich mich kleinmachen kann.", s:"angst"},
+   {t:"Arbeit. Mehr arbeiten. Noch mehr arbeiten.", s:"kontrolle"}]},
+ {q:"Was denkst du über dein inneres Kind?",
+  a:[
+   {t:"Das wurde übergangen. Das hat eine Wut.", s:"wut"},
+   {t:"Das ist irgendwann gegangen. Ich weiß nicht wohin.", s:"leere"},
+   {t:"Das hatte dauernd Angst, nicht geliebt zu werden.", s:"angst"},
+   {t:"Das musste zu früh funktionieren. Erwachsen sein.", s:"kontrolle"}]},
+ {q:"Was wäre die größte Veränderung, wenn du wirklich dahinter kommst?",
+  a:[
+   {t:"Ich müsste nicht mehr kämpfen. Einfach da sein.", s:"wut"},
+   {t:"Ich würde wieder etwas fühlen. Egal was, aber fühlen.", s:"leere"},
+   {t:"Ich würde aufhören, ständig zu beweisen, dass ich okay bin.", s:"angst"},
+   {t:"Ich könnte loslassen. Vertrauen, dass es auch ohne mich läuft.", s:"kontrolle"}]}
+];
+
+const results = {
+ wut:{
+  icon:"🔥",
+  title:"Der Krieger",
+  desc:"Wut ist dein Hauptkanal. Sie schützt dich vor Verletzung — aber sie schneidet dich gleichzeitig von Nähe, Ruhe und echter Stärke ab.",
+  meaning:"Ein wütender Schatten entsteht fast immer dort, wo dich früher jemand nicht geschützt hat. Dein System hat gelernt: \"Wenn ich nicht kämpfe, verliere ich.\" Das war damals richtig. Heute kostet es dich Beziehungen, Gesundheit und die Fähigkeit, weich zu sein, wenn es dran wäre.",
+  steps:[
+   "<strong>Entkoppeln:</strong> Wenn Wut hochkommt — 3 tiefe Atemzüge BEVOR du reagierst. Nur das. Nicht die Wut wegdrücken, nur nicht sofort handeln.",
+   "<strong>Ursprung finden:</strong> Notiere eine Woche lang jeden Wut-Trigger. 90% werden auf dieselben 2-3 Muster zeigen.",
+   "<strong>Arbeit darunter:</strong> Die Wut ist das Symptom. Darunter liegt meistens Ohnmacht, Enttäuschung oder unverarbeiteter Schmerz. Da hinzukommen ist Session-Arbeit, keine Lektüre."]},
+ leere:{
+  icon:"🌑",
+  title:"Der Abwesende",
+  desc:"Leere ist dein Hauptkanal. Du funktionierst nach außen, aber innerlich ist ein großer Raum, in dem nichts mehr richtig ankommt.",
+  meaning:"Leere ist fast immer ein Schutzmechanismus: Wenn früh zu viel passiert ist — emotional, familiär, chaotisch — lernt dein System, alles runterzufahren. Das hat dich damals geschützt. Heute sitzt du im Job, in Beziehungen, im Leben und fragst dich, warum du nichts mehr spürst.",
+  meaning_extra:"Das ist keine Depression (notwendigerweise). Das ist ein abgeschalteter Nerv.",
+  steps:[
+   "<strong>Klein starten:</strong> 1x am Tag 60 Sekunden still. Keine App, kein Scroll, kein Ziel. Nur: Was ist gerade in meinem Körper?",
+   "<strong>Nicht reparieren, wahrnehmen:</strong> Du musst die Leere nicht füllen. Du musst sie kennen. Das ist der Unterschied.",
+   "<strong>Integration mit Anleitung:</strong> Allein läuft man in Leere-Mustern im Kreis. Eine Session bringt Struktur in das, was unter der Leere liegt (meistens Trauer, die nie da sein durfte)."]},
+ angst:{
+  icon:"🕊️",
+  title:"Der Ungenügende",
+  desc:"Angst vor Ablehnung, Verlassensein, Nicht-genug-Sein ist dein Hauptkanal. Du funktionierst oft — aber immer für andere, selten für dich.",
+  meaning:"Dieser Schatten entsteht dort, wo die Liebe als Kind an Bedingungen geknüpft war. \"Ich werde geliebt, wenn ich brav/leise/leistungsfähig/pflegeleicht bin.\" Als Erwachsener hast du dieses Muster verfeinert — du spürst dauernd die Stimmungen der anderen und passt dich an. Nur: Es gibt keinen Moment, in dem DU einfach sein darfst.",
+  steps:[
+   "<strong>Erkennen, nicht kämpfen:</strong> Wenn die Angst kommt — benenne sie. \"Jetzt ist der alte Angst-Junge da.\" Mehr nicht.",
+   "<strong>Bedürfnisse trainieren:</strong> Täglich EINEN Satz sagen, der nur dir dient, nicht der Situation. \"Ich brauche gerade Ruhe.\" / \"Das tut mir nicht gut.\"",
+   "<strong>Arbeit an der Wurzel:</strong> Dieses Muster löst sich nicht durch Selbstoptimierung — es löst sich durch konfrontierende Arbeit mit der Ursprungssituation. Klassisches Session-Thema."]},
+ kontrolle:{
+  icon:"⚙️",
+  title:"Der Kontrolleur",
+  desc:"Kontrolle ist dein Hauptkanal. Du funktionierst gut, performst, planst, organisierst — aber du kommst nie wirklich zur Ruhe.",
+  meaning:"Dieser Schatten entsteht dort, wo du zu früh erwachsen werden musstest. Familie, die nicht getragen hat. Chaos, das du strukturiert hast. Verantwortung, die nicht für Kinder gedacht war. Dein Nervensystem hat gelernt: \"Nur wenn ICH das steuere, ist es sicher.\"",
+  meaning_extra:"Das hat dich erfolgreich gemacht. Es hindert dich aber auch daran, echte Nähe, echte Entspannung, echtes Fallenlassen zu erleben.",
+  steps:[
+   "<strong>Mikro-Loslassen:</strong> 1x pro Tag bewusst eine kleine Sache NICHT kontrollieren. Jemand anderer entscheidet. Schau, was dein System macht.",
+   "<strong>Körper vor Kopf:</strong> Kontrolleure leben im Kopf. 10 Min Körperwahrnehmung täglich (Spüren, nicht Yoga) bringt dich zurück.",
+   "<strong>Den Grund anschauen:</strong> Die Kontrolle ist kein Charakterzug. Sie ist eine Antwort auf etwas, das damals passiert ist. Das \"damals\" zu bearbeiten ist Session-Arbeit, die am meisten Hebel hat."]}
+};
+
+let state={qi:0,counts:{wut:0,leere:0,angst:0,kontrolle:0}};
+
+function startQuiz(){document.getElementById('intro').classList.add('hidden');document.getElementById('quiz').classList.remove('hidden');renderQuestion()}
+
+function renderQuestion(){
+ const q=questions[state.qi];
+ document.getElementById('qnum').textContent=`Frage ${state.qi+1} von ${questions.length}`;
+ document.getElementById('qtext').textContent=q.q;
+ document.getElementById('bar').style.width=((state.qi)/questions.length*100)+'%';
+ const ans=document.getElementById('answers');ans.innerHTML='';
+ q.a.forEach(opt=>{
+  const b=document.createElement('button');b.className='answer';b.textContent=opt.t;
+  b.onclick=()=>selectAnswer(opt.s);
+  ans.appendChild(b)});
+ window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function selectAnswer(s){
+ state.counts[s]++;state.qi++;
+ if(state.qi>=questions.length){document.getElementById('bar').style.width='100%';setTimeout(showCapture,200)}
+ else{renderQuestion()}
+}
+
+function showCapture(){document.getElementById('quiz').classList.add('hidden');document.getElementById('capture').classList.remove('hidden');window.scrollTo({top:0,behavior:'smooth'})}
+
+function captureLead(e){
+ e.preventDefault();
+ const email=document.getElementById('email').value;
+ const firstname=document.getElementById('firstname').value;
+ const dominant=Object.entries(state.counts).sort((a,b)=>b[1]-a[1])[0][0];
+ // Forward to Jureks email provider (placeholder — replace mailto: with Mailchimp/ConvertKit API endpoint)
+ const payload={email,firstname,shadow_type:dominant,counts:state.counts,ts:new Date().toISOString()};
+ try{
+  // Fire-and-forget to ConvertKit/Mailchimp/custom endpoint
+  fetch('/api/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)}).catch(()=>{});
+  // Fallback localStorage (dev/prototype)
+  localStorage.setItem('em_lead_'+Date.now(),JSON.stringify(payload));
+ }catch(_){}
+ showResult(dominant,firstname);
+ return false;
+}
+
+function showResult(type,firstname){
+ const r=results[type];
+ document.getElementById('capture').classList.add('hidden');
+ document.getElementById('result').classList.remove('hidden');
+ document.getElementById('res-icon').textContent=r.icon;
+ document.getElementById('res-title').textContent=r.title;
+ document.getElementById('res-desc').textContent=(firstname?firstname+', ':'')+r.desc;
+ document.getElementById('res-meaning').innerHTML=r.meaning+(r.meaning_extra?'<br><br>'+r.meaning_extra:'');
+ const ol=document.getElementById('res-steps');ol.innerHTML='';
+ r.steps.forEach(s=>{const li=document.createElement('li');li.innerHTML=s;li.style.marginBottom='12px';ol.appendChild(li)});
+ window.scrollTo({top:0,behavior:'smooth'});
+}
+</script>
+</body>
+</html>
