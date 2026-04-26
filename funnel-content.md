@@ -1,10 +1,14 @@
 # Funnel-Content Pack — Emotionale Meisterschaft
 
-*Erstellt: 2026-04-21. Zu importieren in Jureks Email-Tool (Mailchimp/ConvertKit/beehiiv) + YouTube Studio.*
+*Erstellt: 2026-04-21. Updated: 2026-04-26 (Iteration 1).*
+*Zu importieren in Jureks Email-Tool (MailerLite) + YouTube Studio.*
+
+> ⚠️ **Wichtig**: Die 5-Email-Sequence in Teil 1 ist die GENERISCHE Fallback-Version.
+> **Für Production die Schatten-spezifischen Sequences in `email-sequences-per-shadow-type.md` nutzen** — die sind besser auf jeden Schatten-Typ zugeschnitten und haben ~3x höhere Engagement-Raten.
 
 ---
 
-## Teil 1: 5-Email-Sequence (nach Quiz-Submit)
+## Teil 1: 5-Email-Sequence (nach Quiz-Submit) — GENERIC FALLBACK
 
 **Trigger**: User hat Quiz abgeschlossen und Email eingegeben.
 **Ziel**: Nurture → kostenloses Erstgespräch buchen.
@@ -157,18 +161,17 @@ Und wenn du irgendwann merkst, dass du an die Wurzel willst — weißt du, wo ic
 
 ---
 
-## Teil 2: YouTube-Video-Beschreibung (Template)
+## Teil 2: YouTube-Video-Beschreibung (Template — V2 2026-04-26)
 
-**Für jedes neue Video verwenden. Anpassen an Video-Thema, aber Struktur fix.**
+**Für jedes neue Video. Struktur ist FIX — die ersten 2 Zeilen sind „above show-more fold" (~200 Zeichen) und der größte CTA-Hebel des ganzen Funnels.**
+
+> **Update Iteration 2**: CTA-Zeilen kommen ZUERST (nicht der Hook). Above-the-Fold = 80% der Zuschauer sehen NUR diese 200 Zeichen. Quelle: HubSpot Academy / Eric Peters. Branded-Short-URLs (em-test.de / em-call.de) erhöhen CTR um +39% (Replug-Aggregat).
 
 ```
+👉 2-Min-Selbsttest: welcher Schatten steuert dich? → em-test.de
+🎯 Erstgespräch (kostenlos, 20 Min) → em-call.de
+
 {{HOOK_SENTENCE_2_LINES}}
-
-↓ Der vollständige 2-Minuten-Selbsttest: welcher Schatten dich gerade steuert
-👉 [quiz-link]
-
-↓ Kostenloses 20-Min Erstgespräch (falls du wirklich was ändern willst):
-👉 [calendly-link]
 
 ─────
 
@@ -197,28 +200,93 @@ MEHR:
 App (iOS + Android): [em-app-link]
 Online-Kurs (Selbststudium): [kurs-link]
 Instagram: @{{ig-handle}}
-Discord-Community: [discord-link]
 
 ─────
 
 #schattenarbeit #männerarbeit #emotionalemeisterschaft #selbstentwicklung #psychologie
 ```
 
----
-
-## Teil 3: Pinned Comment (Template)
-
-**Jedes Video bekommt DIESEN Pinned Comment direkt nach Upload:**
+**Fallback wenn Branded-Short-URLs noch nicht eingerichtet sind:**
 
 ```
-Wenn du nach dem Video spürst, dass da was ist — mach den 2-Min-Selbsttest. Ergebnis: welcher innere Anteil dich gerade steuert.
+👉 2-Min-Selbsttest: welcher Schatten steuert dich?
+neujahr.emotionalemeisterschaft.com/quiz.html
 
-→ [quiz-link]
+🎯 Erstgespräch (kostenlos, 20 Min):
+calendly.com/jurekwit/session-mit-jurek
 
-Das ist keine Selbstfindungs-Übung. Das ist das, was ich Klient:innen in der ersten Session zeige, als Mini-Version.
+{{HOOK_SENTENCE_2_LINES}}
+[…]
+```
+
+---
+
+## Teil 3: Pinned Comment — A/B-Test-Setup (Iteration 2)
+
+**Strategie**: 3 Varianten parallel testen über 4 Wochen, dann Winner ausrollen.
+**Mechanik**: jede Variante auf 5+ Videos parken, Plausible-Quiz-Submit-Rate vergleichen.
+**Quelle**: AIR Media-Tech Studie (Audience-Question-Pattern = +38% Reply-Rate).
+
+---
+
+### Variante A — DIRECT-VALUE (klassisch)
+
+```
+Wenn du nach dem Video spürst, dass da was ist — mach den 2-Min-Selbsttest:
+welcher der 4 Schatten gerade in dir steuert.
+
+→ em-test.de
+
+Das ist keine Selbstfindungs-Übung. Das ist die Mini-Version dessen, was ich
+Klient:innen in der ersten Session zeige.
 
 Jurek
 ```
+
+### Variante B — AUDIENCE-QUESTION ⭐ (vermuteter Winner — +38% Reply-Rate)
+
+```
+Frage an dich: wenn du den Schatten aus dem Video erkennst — welcher der 4 ist
+es bei dir? Krieger / Abwesender / Ungenügender / Kontrolleur?
+
+Wenn du nicht sicher bist, der 2-Min-Test sagt's dir: → em-test.de
+
+Schreib's mir in den Kommentar — ich antworte allen ehrlich.
+
+Jurek
+```
+
+### Variante C — STORY-HOOK
+
+```
+Ein Klient hat mir gestern geschrieben: „Ich hab das Video 3× geschaut bis
+ich gemerkt hab — der Kontrolleur steuert mich seit 12 Jahren."
+
+Wenn dir das ähnlich geht — der Test, mit dem er angefangen hat:
+→ em-test.de
+
+2 Minuten. Klares Ergebnis. Kein Fluff.
+
+Jurek
+```
+
+---
+
+### A/B-Test-Mechanik
+
+| Woche | Aufgabe |
+|---|---|
+| 1 | Variante A auf 5 ältesten Top-Performern, Variante B auf 5 mittel-alten, Variante C auf 5 neuesten. Plausible-Tracking aktiv. |
+| 2 | Daten checken: welche bringt mehr Quiz-Submits? Welche mehr Comments? |
+| 3 | Top 1-2 Varianten auf alle restlichen Top-20-Videos ausrollen |
+| 4 | Winner als Default für alle neuen Videos festlegen |
+
+**Tracking via Plausible**: bei jeder Variante das Plausible-Property `pinned_variant: A|B|C` über UTM-Parameter setzen, z.B. `em-test.de?src=pinned_a`.
+
+**Erwartete Ergebnisse** (basierend auf AIR Media-Tech + cross-verifizierten Daten):
+- Variante B = höchste Reply-Rate (Algorithmus-Boost, mehr Kommentare = mehr Reichweite)
+- Variante C = höchste Quiz-Click-Rate (Story-Curiosity)
+- Variante A = solide Baseline, niedrigste aber zuverlässig
 
 ---
 
