@@ -110,9 +110,17 @@ a:hover{text-decoration:underline}
 <p id="res-meaning"></p>
 <h2 style="font-size:22px;margin-top:32px;margin-bottom:16px">Die nächsten 3 Schritte</h2>
 <ol id="res-steps" style="color:var(--white-muted);padding-left:20px;font-size:17px;line-height:1.8"></ol>
+<div style="margin-top:40px;padding:24px;background:rgba(212,168,67,0.06);border:1px solid rgba(212,168,67,0.2);border-radius:4px">
+<p style="color:var(--white);font-size:16px;margin:0 0 8px 0;font-weight:600">Was jetzt — wenn du wirklich was bewegen willst:</p>
+<p style="color:var(--white-muted);font-size:15px;margin:0">Im 20-Min-Erstgespräch (kostenlos) schauen wir gemeinsam, ob 1:1-Arbeit der nächste Schritt für dich ist. Keine Bedingung, kein Verkaufs-Druck — die meisten meiner Klienten kommen genau über diesen Weg rein.</p>
+</div>
 <div class="cta-group">
-<a href="/sessions.html" onclick="plausible('Session CTA Click', { props: { source: 'quiz_result' } })" class="btn plausible-event-name=Session+CTA+Click plausible-event-source=quiz_result">1:1 Session — kostenloses Erstgespräch</a>
-<a href="/" class="btn btn-outline">Mehr über den Kurs</a>
+<a href="https://calendly.com/jurekwit/session-mit-jurek" target="_blank" onclick="plausible('Calendly Click', { props: { source: 'quiz_result_direct' } })" class="btn plausible-event-name=Calendly+Click plausible-event-source=quiz_result_direct">Kostenloses 20-Min-Erstgespräch buchen</a>
+<a href="/sessions.html#pricing" onclick="plausible('Session CTA Click', { props: { source: 'quiz_result_pricing' } })" class="btn btn-outline plausible-event-name=Session+CTA+Click plausible-event-source=quiz_result_pricing">Sessions + Pakete im Detail</a>
+</div>
+<div style="margin-top:32px;padding-top:24px;border-top:1px solid rgba(212,168,67,0.12);text-align:center">
+<p style="color:var(--white-dim);font-size:14px;margin:0 0 12px 0">Kennst du jemanden, der das auch lesen sollte?</p>
+<button onclick="shareResult()" class="btn btn-outline btn-sm" style="margin:0 auto">Ergebnis-Link teilen</button>
 </div>
 </div>
 
@@ -287,8 +295,35 @@ function showResult(type,firstname){
  document.getElementById('res-meaning').innerHTML=r.meaning+(r.meaning_extra?'<br><br>'+r.meaning_extra:'');
  const ol=document.getElementById('res-steps');ol.innerHTML='';
  r.steps.forEach(s=>{const li=document.createElement('li');li.innerHTML=s;li.style.marginBottom='12px';ol.appendChild(li)});
+ // Persist result so user can share / return via URL
+ try { window.history.replaceState({}, '', '?type='+type); } catch(_) {}
  window.scrollTo({top:0,behavior:'smooth'});
 }
+
+function shareResult(){
+ plausible('Quiz Result Share');
+ const url = window.location.origin + window.location.pathname;
+ const text = 'Mach den 2-Min-Selbsttest: welcher Schatten steuert dich gerade? '+url;
+ if (navigator.share) {
+  navigator.share({title:'Welcher Schatten steuert dich?', text:text, url:url}).catch(()=>{});
+ } else {
+  navigator.clipboard.writeText(text).then(()=>{
+   alert('Link kopiert! Schick ihn jemandem, der das auch lesen sollte.');
+  }).catch(()=>{
+   prompt('Link zum Teilen:', url);
+  });
+ }
+}
+
+// Allow direct deep-link to specific result type (?type=wut|leere|angst|kontrolle)
+(function(){
+ const params = new URLSearchParams(window.location.search);
+ const t = params.get('type');
+ if (t && results[t]) {
+  document.getElementById('intro').classList.add('hidden');
+  showResult(t, '');
+ }
+})();
 </script>
 </body>
 </html>
