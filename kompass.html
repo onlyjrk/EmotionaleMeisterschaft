@@ -513,6 +513,19 @@
             box-shadow: none;
             transform: none;
         }
+        .btn-whatsapp {
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: #fff;
+            box-shadow: 0 8px 24px rgba(37, 211, 102, 0.18);
+        }
+        .btn-whatsapp:hover {
+            box-shadow: 0 12px 32px rgba(37, 211, 102, 0.28);
+        }
+        .inline-link {
+            color: var(--gold-light);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
         .direct-book-note {
             font-size: 12px;
             color: var(--white-dim);
@@ -713,6 +726,10 @@
                 <a class="btn btn-ghost" href="https://calendly.com/jurekwit/session-mit-jurek" target="_blank" rel="noopener" onclick="trackCalendlyClick('kompass_intro_direct')">
                     Kostenlose erste Session buchen
                 </a>
+                <p class="direct-book-note">Du willst ohne Formular kurz schreiben?</p>
+                <a class="btn btn-whatsapp" href="https://wa.me/84865978703?text=Hi%20Jurek%2C%20ich%20komme%20%C3%BCber%20Instagram%20und%20w%C3%BCrde%20dir%20gern%20kurz%20mein%20Thema%20schildern." target="_blank" rel="noopener" onclick="trackWhatsAppClick('kompass_intro_direct')">
+                    Direkt auf WhatsApp schreiben
+                </a>
             </div>
 
             <div class="intro-promise">
@@ -776,7 +793,10 @@
 
                 <label class="input-label">Optional: WhatsApp</label>
                 <input type="tel" class="input-field" name="whatsapp" id="fieldWhatsApp" placeholder="+49 ..." autocomplete="tel">
-                <p class="field-hint">Nur falls ich dir dort leichter antworten soll.</p>
+                <p class="field-hint">
+                    Nur falls ich dir dort leichter antworten soll.
+                    <a class="inline-link" href="https://wa.me/84865978703?text=Hi%20Jurek%2C%20ich%20komme%20%C3%BCber%20Instagram%20und%20w%C3%BCrde%20dir%20gern%20kurz%20mein%20Thema%20schildern." target="_blank" rel="noopener" onclick="trackWhatsAppClick('kompass_contact_direct')">Oder direkt schreiben.</a>
+                </p>
 
                 <div class="button-row">
                     <button type="submit" class="btn" id="submitBtn">
@@ -836,6 +856,9 @@
             <div class="button-row" style="margin-top:24px;">
                 <a class="btn" href="https://calendly.com/jurekwit/session-mit-jurek" target="_blank" rel="noopener" onclick="trackCalendlyClick('kompass_thanks_direct')">
                     Kostenlose erste Session buchen
+                </a>
+                <a class="btn btn-whatsapp" href="https://wa.me/84865978703?text=Hi%20Jurek%2C%20ich%20habe%20gerade%20den%20Kompass%20ausgef%C3%BCllt%20und%20w%C3%BCrde%20dir%20gern%20direkt%20kurz%20schreiben." target="_blank" rel="noopener" onclick="trackWhatsAppClick('kompass_thanks_direct')">
+                    Direkt auf WhatsApp schreiben
                 </a>
             </div>
         </div>
@@ -935,6 +958,10 @@ const answers = {};
 
 function trackCalendlyClick(source) {
     if (window.plausible) plausible('Calendly Click', { props: { source } });
+}
+
+function trackWhatsAppClick(source) {
+    if (window.plausible) plausible('WhatsApp Click', { props: { source } });
 }
 
 function getTrafficSource() {
