@@ -7,7 +7,7 @@
     <title>1:1 Session | Emotionale Meisterschaft</title>
 
     <meta property="og:title" content="1:1 Session mit Jurek — Schattenarbeit für Männer">
-    <meta property="og:description" content="Heilpraktiker für Psychotherapie. 4.800+ Sessions. Kostenloses Erstgespräch.">
+    <meta property="og:description" content="Heilpraktiker für Psychotherapie. 4.800+ Sessions. Die erste Session ist kostenlos.">
     <meta property="og:type" content="website">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -200,10 +200,34 @@
         }
         .hero-cta {
             display: flex;
-            gap: 16px;
+            gap: 32px;
             justify-content: center;
             flex-wrap: wrap;
-            margin-bottom: 64px;
+            margin-bottom: 56px;
+            align-items: flex-start;
+        }
+        .cta-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 14px;
+            max-width: 300px;
+        }
+        .cta-hint {
+            font-size: 12px;
+            color: var(--white-dim);
+            text-align: center;
+            line-height: 1.5;
+            letter-spacing: 0.02em;
+        }
+        .cta-hint .arrow {
+            color: var(--gold);
+            margin-right: 4px;
+            font-weight: 700;
+        }
+        @media (max-width: 720px) {
+            .hero-cta { gap: 20px; margin-bottom: 40px; }
+            .cta-group { max-width: 100%; width: 100%; }
         }
         .hero-trust {
             display: flex;
@@ -691,7 +715,7 @@
 <nav class="nav">
     <div class="nav-inner">
         <a href="/" class="nav-logo">EMOTIONALE MEISTERSCHAFT</a>
-        <a href="#booking" class="btn btn-primary nav-cta">Gespräch buchen</a>
+        <a href="https://calendly.com/jurekwit/session-mit-jurek" target="_blank" onclick="trackCalendlyClick('nav')" class="btn btn-primary nav-cta plausible-event-name=Calendly+Click plausible-event-source=nav">Kostenlose Session</a>
     </div>
 </nav>
 
@@ -710,13 +734,19 @@
                 Wut, Leere, Getriggertsein, Panik. Du hast gelesen, meditiert, Podcasts gehört. Es verändert sich trotzdem nichts. In einer Session bringen wir gemeinsam ans Licht, was dich wirklich steuert — und zerlegen es.
             </p>
             <div class="hero-cta">
-                <a href="#booking" class="btn btn-primary btn-lg plausible-event-name=CTA+Hero+Erstgespraech">
-                    Kostenloses Erstgespräch
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M5 12h14M12 5l7 7-7 7"/>
-                    </svg>
-                </a>
-                <a href="/quiz.html" class="btn btn-outline plausible-event-name=CTA+Hero+Quiz">Erst 2-Min-Selbsttest</a>
+                <div class="cta-group">
+                    <a href="https://calendly.com/jurekwit/session-mit-jurek" target="_blank" onclick="trackCalendlyClick('hero_direct')" class="btn btn-primary btn-lg plausible-event-name=Calendly+Click plausible-event-source=hero_direct">
+                        Kostenlose erste Session buchen
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                    <span class="cta-hint"><span class="arrow">↑</span>Du willst direkt mit mir arbeiten — kein Quiz, kein Formular.</span>
+                </div>
+                <div class="cta-group">
+                    <a href="/kompass.html" class="btn btn-outline plausible-event-name=CTA+Hero+Kompass">Erst Thema schildern</a>
+                    <span class="cta-hint"><span class="arrow">↑</span>Du willst erstmal zeigen, worum es geht? 3 Min, ich lese es persönlich.</span>
+                </div>
             </div>
             <div class="hero-trust">
                 <div class="hero-trust-item">
@@ -819,18 +849,18 @@
         <div class="how-steps">
             <div class="step">
                 <div class="step-num">01</div>
-                <h3>Kostenloses Erstgespräch</h3>
-                <p>20 Minuten. Video. Wir schauen, wo du stehst, was dich hierher gebracht hat — und ob eine Session das Richtige für dich ist. Kein Verkauf.</p>
+                <h3>Kostenlose erste Session</h3>
+                <p>90 Minuten. Online oder in Präsenz. Wir arbeiten direkt an dem Thema, das gerade steht — ohne Verkaufs-Call davor.</p>
             </div>
             <div class="step">
                 <div class="step-num">02</div>
-                <h3>Die Session</h3>
-                <p>90 Minuten. Online oder in Präsenz. Wir gehen direkt an den Punkt, der gerade steht. Schattenarbeit, Trauma-Integration, emotionales Prozessieren — je nachdem, was Sache ist.</p>
+                <h3>Danach klare Entscheidung</h3>
+                <p>Am Ende schauen wir ehrlich: War es hilfreich, passt die Arbeitsweise, und macht ein nächster Schritt Sinn?</p>
             </div>
             <div class="step">
                 <div class="step-num">03</div>
-                <h3>Integration</h3>
-                <p>Eine Woche Austausch nach der Session. Du bekommst einen klaren Fokus mit. Und die Sicherheit, dass du nicht alleine damit da stehst.</p>
+                <h3>Wenn du weitermachst</h3>
+                <p>Dann geht es einzeln oder im Paket weiter. Du bekommst einen klaren Fokus mit und musst dich nicht vorab festlegen.</p>
             </div>
         </div>
     </div>
@@ -843,22 +873,23 @@
             <div class="label">Investition</div>
             <h2 class="display-lg">Klarheit über Preise.<br><em>Wie bei jeder ehrlichen Sache.</em></h2>
             <p style="color: var(--white-muted); max-width: 620px; margin: 24px auto 0; font-size: 17px;">
-                Erstgespräch ist immer kostenlos. Danach entscheidest du: Einzeln, oder als Paket — wenn du wirklich was bewegen willst.
+                Die erste Session ist kostenlos. Danach entscheidest du: einzeln, oder als Paket — wenn du wirklich weiterarbeiten willst.
             </p>
         </div>
         <div class="pricing-grid">
 
             <div class="price-card">
-                <div class="price-card-name">Single</div>
-                <div class="price-card-sub">Eine Session</div>
-                <div class="price-card-price"><span class="currency">€</span>130</div>
-                <div class="price-card-per">pro 90-Min Session</div>
+                <div class="price-card-name">Start</div>
+                <div class="price-card-sub">Erste Session</div>
+                <div class="price-card-price"><span class="currency">€</span>0</div>
+                <div class="price-card-per">einmalig · 90 Minuten</div>
                 <ul class="price-card-features">
                     <li>1× 90 Min, online oder Präsenz</li>
+                    <li>Kein Vorgespräch als Hürde</li>
                     <li>Konkreter Fokus für danach</li>
-                    <li>1 Woche Follow-up per Email</li>
+                    <li>Danach entscheidest du frei</li>
                 </ul>
-                <a href="#booking" class="price-card-cta plausible-event-name=Pricing+Click+Single">Erstgespräch buchen</a>
+                <a href="#booking" class="price-card-cta plausible-event-name=Pricing+Click+Single">Kostenlose Session buchen</a>
             </div>
 
             <div class="price-card featured">
@@ -872,7 +903,7 @@
                     <li>Follow-up nach jeder Session</li>
                     <li>Ratenzahlung möglich</li>
                 </ul>
-                <a href="#booking" class="price-card-cta plausible-event-name=Pricing+Click+3er">Mehr im Erstgespräch</a>
+                <a href="#booking" class="price-card-cta plausible-event-name=Pricing+Click+3er">Nach der ersten Session</a>
             </div>
 
             <div class="price-card">
@@ -887,13 +918,13 @@
                     <li>Strukturierter Fokus über die Phase</li>
                     <li>Ratenzahlung möglich</li>
                 </ul>
-                <a href="#booking" class="price-card-cta plausible-event-name=Pricing+Click+6er">Mehr im Erstgespräch</a>
+                <a href="#booking" class="price-card-cta plausible-event-name=Pricing+Click+6er">Nach der ersten Session</a>
             </div>
 
         </div>
         <p class="pricing-note">
             Alle Preise inkl. 19% USt. Bestandsklienten behalten ihren bisherigen Tarif.
-            Keine Vorauszahlung — du zahlst nach jeder Session bzw. zu Paket-Start. Längere Begleitung (10er-Paket, 1.100 €) klären wir individuell im Erstgespräch.
+            Nach der kostenlosen ersten Session kostet eine einzelne Folgesession 130 €. Keine Vorauszahlung — du zahlst nach jeder Session bzw. zu Paket-Start. Längere Begleitung (10er-Paket, 1.100 €) klären wir individuell.
         </p>
     </div>
 </section>
@@ -912,7 +943,7 @@
                 Die Männer, mit denen ich arbeite, sind in sensiblen Themen unterwegs. Aus diesem Grund veröffentliche ich auf dieser Seite keine namentlichen Testimonials.
             </p>
             <p style="color: var(--white-dim); font-size: 14px; margin-top: 16px;">
-                Im Erstgespräch kann ich dir anonymisiert Beispiele geben, wenn du sie hören willst.
+                In der ersten Session kann ich dir anonymisiert Beispiele geben, wenn du sie hören willst.
             </p>
         </div>
     </div>
@@ -923,24 +954,29 @@
     <div class="container">
         <div class="section-head">
             <div class="label">Dein nächster Schritt</div>
-            <h2 class="display-lg">Kostenloses Erstgespräch.<br><em>20 Minuten. Null Risiko.</em></h2>
+            <h2 class="display-lg">Kostenlose erste Session.<br><em>90 Minuten. Null Risiko.</em></h2>
         </div>
         <div class="booking-card">
             <div class="booking-price">0 €</div>
-            <div class="booking-price-label">Erstgespräch</div>
+            <div class="booking-price-label">Erste Session</div>
 
             <div class="booking-features">
-                <div class="booking-feature"><span class="check-icon">✓</span><span>20 Min Video-Call — wir reden, ich höre zu</span></div>
-                <div class="booking-feature"><span class="check-icon">✓</span><span>Ich sage dir ehrlich, ob eine Session dir was bringt</span></div>
+                <div class="booking-feature"><span class="check-icon">✓</span><span>90 Min Session — wir arbeiten direkt an deinem Thema</span></div>
+                <div class="booking-feature"><span class="check-icon">✓</span><span>Ich sage dir ehrlich, ob meine Arbeit zu dir passt</span></div>
                 <div class="booking-feature"><span class="check-icon">✓</span><span>Kein Verkaufs-Druck. Kein Upsell. Kein Funnel-Script.</span></div>
-                <div class="booking-feature"><span class="check-icon">✓</span><span>Am Ende entscheidest DU, ob du weiter machst</span></div>
+                <div class="booking-feature"><span class="check-icon">✓</span><span>Am Ende entscheidest du, ob du weiter machst</span></div>
             </div>
 
             <a href="https://calendly.com/jurekwit/session-mit-jurek" target="_blank" onclick="trackCalendlyClick('discovery_card')" class="btn btn-primary btn-lg plausible-event-name=Calendly+Click plausible-event-source=sessions_card" style="width: 100%; justify-content: center;">
-                Jetzt Termin wählen
+                Kostenlose erste Session buchen
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M5 12h14M12 5l7 7-7 7"/>
                 </svg>
+            </a>
+
+            <a href="https://wa.me/84865978703?text=Hi%20Jurek%2C%20ich%20h%C3%A4tte%20gern%20kurz%20Kontakt%20zur%20kostenlosen%20ersten%20Session." target="_blank" rel="noopener" onclick="plausible('WhatsApp Click', { props: { source: 'sessions_card' } })" class="btn plausible-event-name=WhatsApp+Click plausible-event-source=sessions_card" style="width: 100%; justify-content: center; margin-top: 12px; background: linear-gradient(135deg,#25D366,#128C7E); color: #fff; box-shadow: 0 10px 40px -10px rgba(37,211,102,0.4);">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                Lieber kurz auf WhatsApp schreiben
             </a>
 
             <a href="em://booking" class="btn btn-outline" style="width: 100%; justify-content: center; margin-top: 12px;" id="app-deeplink">
@@ -961,7 +997,7 @@
             <details class="faq-item">
                 <summary class="faq-q">Was kostet eine Session?</summary>
                 <div class="faq-a">
-                    Single-Session 130 €. Pakete: 3er für 360 € (120 €/Session), 6er für 720 € (120 €/Session, plus Notfall-Call), 10er für 1.100 € (110 €/Session, plus Priorität-Slots). Alle Details in der <a href="#pricing" style="color: var(--gold);">Pricing-Sektion</a>. Das Erstgespräch ist immer kostenlos.
+                    Die erste Session ist kostenlos. Danach kostet eine einzelne Folgesession 130 €. Pakete: 3er für 360 € (120 €/Session), 6er für 720 € (120 €/Session, plus Notfall-Call), 10er für 1.100 € (110 €/Session, plus Priorität-Slots). Alle Details stehen in der <a href="#pricing" style="color: var(--gold);">Pricing-Sektion</a>.
                 </div>
             </details>
             <details class="faq-item">
@@ -1003,19 +1039,19 @@
             <details class="faq-item">
                 <summary class="faq-q">Online oder in Präsenz?</summary>
                 <div class="faq-a">
-                    Beides möglich. Online funktioniert erstaunlich gut und ist für die meisten der einfachste Einstieg. Präsenz biete ich im Raum Berlin / Brandenburg an — Details klären wir im Erstgespräch.
+                    Beides möglich. Online funktioniert erstaunlich gut und ist für die meisten der einfachste Einstieg. Präsenz biete ich im Raum Berlin / Brandenburg an — Details klären wir vorab oder in der ersten Session.
                 </div>
             </details>
             <details class="faq-item">
                 <summary class="faq-q">Wie schnell bekomme ich einen Termin?</summary>
                 <div class="faq-a">
-                    Erstgespräch meist innerhalb einer Woche. Erste richtige Session innerhalb von 2–3 Wochen. Bei akuten Themen schneller — das klären wir direkt.
+                    Die kostenlose erste Session meist innerhalb von 1–2 Wochen. Bei akuten Themen schneller — das klären wir direkt.
                 </div>
             </details>
             <details class="faq-item">
-                <summary class="faq-q">Was, wenn ich im Erstgespräch merke, es passt nicht?</summary>
+                <summary class="faq-q">Was, wenn ich in der ersten Session merke, es passt nicht?</summary>
                 <div class="faq-a">
-                    Dann sagst du das, und wir sind fertig. Kein Problem. Das Erstgespräch existiert genau dafür — damit keiner von uns in etwas gezogen wird, das nicht passt.
+                    Dann sagst du das, und wir sind fertig. Kein Problem. Die erste Session ist kostenlos, damit keiner von uns in etwas gezogen wird, das nicht passt.
                 </div>
             </details>
             <details class="faq-item">
@@ -1063,17 +1099,17 @@
 
             <div style="padding: 32px; background: var(--charcoal); border: 1px solid rgba(212, 168, 67, 0.15); border-radius: 4px;">
                 <div style="font-family: var(--font-display); font-size: 36px; color: var(--gold); line-height: 1; margin-bottom: 12px;">01</div>
-                <h3 style="font-family: var(--font-display); font-size: 22px; margin-bottom: 12px; color: var(--white);">Erstgespräch: 0 € Risiko</h3>
+                <h3 style="font-family: var(--font-display); font-size: 22px; margin-bottom: 12px; color: var(--white);">Erste Session: 0 € Risiko</h3>
                 <p style="color: var(--white-muted); font-size: 15px; line-height: 1.6; margin: 0;">
-                    Wenn nach 20 Min klar ist, dass es nicht passt — du sagst es, wir sind fertig. Kein Nachfassen, keine Auto-Mails, keine Bedingung.
+                    Wenn in der ersten Session klar ist, dass es nicht passt — du sagst es, wir sind fertig. Kein Nachfassen, keine Auto-Mails, keine Bedingung.
                 </p>
             </div>
 
             <div style="padding: 32px; background: var(--charcoal); border: 1px solid var(--gold); border-radius: 4px; position: relative;">
                 <div style="font-family: var(--font-display); font-size: 36px; color: var(--gold); line-height: 1; margin-bottom: 12px;">02</div>
-                <h3 style="font-family: var(--font-display); font-size: 22px; margin-bottom: 12px; color: var(--white);">30-Tage-Garantie auf erste Session</h3>
+                <h3 style="font-family: var(--font-display); font-size: 22px; margin-bottom: 12px; color: var(--white);">30-Tage-Garantie auf erste bezahlte Session</h3>
                 <p style="color: var(--white-muted); font-size: 15px; line-height: 1.6; margin: 0;">
-                    Wenn du nach der ersten bezahlten Session merkst, dass die Arbeit nicht für dich ist: <strong style="color: var(--white);">100% Erstattung, ohne Diskussion</strong>. Diese Garantie gilt 30 Tage.
+                    Wenn du nach der ersten bezahlten Session nach dem kostenlosen Start merkst, dass die Arbeit nicht für dich ist: <strong style="color: var(--white);">100% Erstattung, ohne Diskussion</strong>. Diese Garantie gilt 30 Tage.
                 </p>
             </div>
 
@@ -1101,10 +1137,10 @@
                 <em>weiter so</em> — oder einer, der funktioniert.
             </h2>
             <p style="color: var(--white-muted); max-width: 600px; margin: 0 auto 40px; font-size: 17px;">
-                20 Minuten. Kostenlos. Ohne Bedingungen.
+                90 Minuten. Kostenlos. Ohne Bedingungen.
             </p>
             <a href="https://calendly.com/jurekwit/session-mit-jurek" target="_blank" onclick="trackCalendlyClick('discovery_footer')" class="btn btn-primary btn-lg plausible-event-name=Calendly+Click plausible-event-source=sessions_footer">
-                Erstgespräch buchen
+                Kostenlose erste Session buchen
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M5 12h14M12 5l7 7-7 7"/>
                 </svg>
@@ -1118,7 +1154,7 @@
     <a href="https://calendly.com/jurekwit/session-mit-jurek" target="_blank"
        onclick="trackCalendlyClick('sticky_mobile')"
        class="plausible-event-name=Calendly+Click plausible-event-source=sessions_sticky">
-        Kostenloses 20-Min-Erstgespräch
+        Kostenlose erste Session
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M5 12h14M12 5l7 7-7 7"/>
         </svg>

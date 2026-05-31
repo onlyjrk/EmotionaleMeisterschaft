@@ -106,17 +106,39 @@ a:hover{text-decoration:underline}
 <h2 id="res-title"></h2>
 <p id="res-desc" style="max-width:520px;margin:0 auto 24px"></p>
 </div>
+
+<!-- Pains-Block: 3 spezifische Pain-Points pro Schatten-Typ -->
+<div id="res-pains-wrap" style="margin-top:32px;padding:24px;background:rgba(196,69,54,0.06);border-left:2px solid var(--ember);border-radius:2px">
+<p style="color:var(--white);font-size:14px;margin:0 0 14px 0;font-weight:600;letter-spacing:0.05em;text-transform:uppercase">Das hier kennst du wahrscheinlich:</p>
+<ul id="res-pains" style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px"></ul>
+</div>
+
 <h2 style="font-size:22px;margin-top:40px;margin-bottom:16px">Was das für dich bedeutet</h2>
 <p id="res-meaning"></p>
 <h2 style="font-size:22px;margin-top:32px;margin-bottom:16px">Die nächsten 3 Schritte</h2>
 <ol id="res-steps" style="color:var(--white-muted);padding-left:20px;font-size:17px;line-height:1.8"></ol>
-<div style="margin-top:40px;padding:24px;background:rgba(212,168,67,0.06);border:1px solid rgba(212,168,67,0.2);border-radius:4px">
-<p style="color:var(--white);font-size:16px;margin:0 0 8px 0;font-weight:600">Was jetzt — wenn du wirklich was bewegen willst:</p>
-<p style="color:var(--white-muted);font-size:15px;margin:0">Im 20-Min-Erstgespräch (kostenlos) schauen wir gemeinsam, ob 1:1-Arbeit der nächste Schritt für dich ist. Keine Bedingung, kein Verkaufs-Druck — die meisten meiner Klienten kommen genau über diesen Weg rein.</p>
+
+<!-- Social-Validation + Time-Bound -->
+<div style="margin-top:40px;padding:20px 24px;background:rgba(212,168,67,0.04);border:1px solid rgba(212,168,67,0.15);border-radius:2px;display:flex;gap:14px;align-items:flex-start">
+<span style="color:var(--gold);font-size:20px;line-height:1.4">●</span>
+<div>
+<p style="color:var(--white);font-size:15px;margin:0 0 4px 0;font-weight:600">Aktuelle Slots</p>
+<p id="res-social" style="color:var(--white-muted);font-size:14px;margin:0;line-height:1.5"></p>
 </div>
+</div>
+
+<div style="margin-top:32px;padding:24px;background:rgba(212,168,67,0.06);border:1px solid rgba(212,168,67,0.2);border-radius:4px">
+<p style="color:var(--white);font-size:16px;margin:0 0 8px 0;font-weight:600">Was jetzt — wenn du wirklich was bewegen willst:</p>
+<p style="color:var(--white-muted);font-size:15px;margin:0">Du hast zwei Wege: <strong style="color:var(--white)">kostenlose erste Session buchen</strong> oder <strong style="color:var(--white)">kurz auf WhatsApp</strong>, wenn du erstmal nur Fragen hast.</p>
+</div>
+
 <div class="cta-group">
-<a href="https://calendly.com/jurekwit/session-mit-jurek" target="_blank" onclick="plausible('Calendly Click', { props: { source: 'quiz_result_direct' } })" class="btn plausible-event-name=Calendly+Click plausible-event-source=quiz_result_direct">Kostenloses 20-Min-Erstgespräch buchen</a>
-<a href="/sessions.html#pricing" onclick="plausible('Session CTA Click', { props: { source: 'quiz_result_pricing' } })" class="btn btn-outline plausible-event-name=Session+CTA+Click plausible-event-source=quiz_result_pricing">Sessions + Pakete im Detail</a>
+<a id="res-wa-btn" href="#" target="_blank" rel="noopener" onclick="plausible('WhatsApp Click', { props: { source: 'quiz_result' } })" class="btn plausible-event-name=WhatsApp+Click plausible-event-source=quiz_result" style="background:linear-gradient(135deg,#25D366,#128C7E);color:#fff">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+<span id="res-wa-label">Kurz auf WhatsApp schreiben</span>
+</a>
+<a href="https://calendly.com/jurekwit/session-mit-jurek" target="_blank" onclick="plausible('Calendly Click', { props: { source: 'quiz_result_direct' } })" class="btn btn-outline plausible-event-name=Calendly+Click plausible-event-source=quiz_result_direct">Kostenlose erste Session</a>
+<a href="/sessions.html#pricing" onclick="plausible('Session CTA Click', { props: { source: 'quiz_result_pricing' } })" class="btn btn-outline plausible-event-name=Session+CTA+Click plausible-event-source=quiz_result_pricing" style="opacity:0.75;font-size:14px;padding:12px 24px">Sessions + Pakete im Detail</a>
 </div>
 <div style="margin-top:32px;padding-top:24px;border-top:1px solid rgba(212,168,67,0.12);text-align:center">
 <p style="color:var(--white-dim);font-size:14px;margin:0 0 12px 0">Kennst du jemanden, der das auch lesen sollte?</p>
@@ -185,6 +207,11 @@ const results = {
   title:"Der Krieger",
   desc:"Wut ist dein Hauptkanal. Sie schützt dich vor Verletzung — aber sie schneidet dich gleichzeitig von Nähe, Ruhe und echter Stärke ab.",
   meaning:"Ein wütender Schatten entsteht fast immer dort, wo dich früher jemand nicht geschützt hat. Dein System hat gelernt: \"Wenn ich nicht kämpfe, verliere ich.\" Das war damals richtig. Heute kostet es dich Beziehungen, Gesundheit und die Fähigkeit, weich zu sein, wenn es dran wäre.",
+  pains:[
+   "Du explodierst über Kleinigkeiten und schämst dich danach",
+   "Beziehungen halten 1-2 Jahre, dann eskalieren sie immer am gleichen Punkt",
+   "Du erkennst dich selbst nicht mehr, wenn du wirklich wütend bist"],
+  wa_msg:"Hi Jurek, mein Test sagt: der Krieger. Hätte gern kurz Kontakt.",
   steps:[
    "<strong>Entkoppeln:</strong> Wenn Wut hochkommt — 3 tiefe Atemzüge BEVOR du reagierst. Nur das. Nicht die Wut wegdrücken, nur nicht sofort handeln.",
    "<strong>Ursprung finden:</strong> Notiere eine Woche lang jeden Wut-Trigger. 90% werden auf dieselben 2-3 Muster zeigen.",
@@ -195,6 +222,11 @@ const results = {
   desc:"Leere ist dein Hauptkanal. Du funktionierst nach außen, aber innerlich ist ein großer Raum, in dem nichts mehr richtig ankommt.",
   meaning:"Leere ist fast immer ein Schutzmechanismus: Wenn früh zu viel passiert ist — emotional, familiär, chaotisch — lernt dein System, alles runterzufahren. Das hat dich damals geschützt. Heute sitzt du im Job, in Beziehungen, im Leben und fragst dich, warum du nichts mehr spürst.",
   meaning_extra:"Das ist keine Depression (notwendigerweise). Das ist ein abgeschalteter Nerv.",
+  pains:[
+   "Du fühlst nichts mehr — auch dann nicht, wenn du \"eigentlich\" was fühlen müsstest",
+   "Sex, Essen, Erfolg — nichts trifft mehr richtig",
+   "Du bist da, aber du bist nicht da. Auch nicht bei dir selbst."],
+  wa_msg:"Hi Jurek, mein Test sagt: der Abwesende. Hätte gern kurz Kontakt.",
   steps:[
    "<strong>Klein starten:</strong> 1x am Tag 60 Sekunden still. Keine App, kein Scroll, kein Ziel. Nur: Was ist gerade in meinem Körper?",
    "<strong>Nicht reparieren, wahrnehmen:</strong> Du musst die Leere nicht füllen. Du musst sie kennen. Das ist der Unterschied.",
@@ -204,6 +236,11 @@ const results = {
   title:"Der Ungenügende",
   desc:"Angst vor Ablehnung, Verlassensein, Nicht-genug-Sein ist dein Hauptkanal. Du funktionierst oft — aber immer für andere, selten für dich.",
   meaning:"Dieser Schatten entsteht dort, wo die Liebe als Kind an Bedingungen geknüpft war. \"Ich werde geliebt, wenn ich brav/leise/leistungsfähig/pflegeleicht bin.\" Heute hast du dieses Muster verfeinert — du spürst dauernd die Stimmungen der anderen und passt dich an. Nur: Es gibt keinen Moment, in dem DU einfach sein darfst.",
+  pains:[
+   "Du sagst Ja, wenn du Nein meinst — und merkst es erst Stunden später",
+   "Eine Mail kommt nicht, eine Person ist kurz still — und dein System dreht durch",
+   "Du performst dauernd. Auch da, wo du nicht performen müsstest."],
+  wa_msg:"Hi Jurek, mein Test sagt: der Ungenügende. Hätte gern kurz Kontakt.",
   steps:[
    "<strong>Erkennen, nicht kämpfen:</strong> Wenn die Angst kommt — benenne sie. \"Jetzt ist das alte Angst-Kind da.\" Mehr nicht.",
    "<strong>Bedürfnisse trainieren:</strong> Täglich EINEN Satz sagen, der nur dir dient, nicht der Situation. \"Ich brauche gerade Ruhe.\" / \"Das tut mir nicht gut.\"",
@@ -214,11 +251,19 @@ const results = {
   desc:"Kontrolle ist dein Hauptkanal. Du funktionierst gut, performst, planst, organisierst — aber du kommst nie wirklich zur Ruhe.",
   meaning:"Dieser Schatten entsteht dort, wo du zu früh erwachsen werden musstest. Familie, die nicht getragen hat. Chaos, das du strukturiert hast. Verantwortung, die nicht für Kinder gedacht war. Dein Nervensystem hat gelernt: \"Nur wenn ICH das steuere, ist es sicher.\"",
   meaning_extra:"Das hat dich erfolgreich gemacht. Es hindert dich aber auch daran, echte Nähe, echte Entspannung, echtes Fallenlassen zu erleben.",
+  pains:[
+   "Urlaub fühlt sich anstrengender an als Arbeit",
+   "Niemand macht es so richtig wie du — also machst du alles selbst",
+   "Du kannst nicht abschalten. Auch im Schlaf läuft der Kopf weiter."],
+  wa_msg:"Hi Jurek, mein Test sagt: der Kontrolleur. Hätte gern kurz Kontakt.",
   steps:[
    "<strong>Mikro-Loslassen:</strong> 1x pro Tag bewusst eine kleine Sache NICHT kontrollieren. Jemand anderer entscheidet. Schau, was dein System macht.",
    "<strong>Körper vor Kopf:</strong> Kontrolleure leben im Kopf. 10 Min Körperwahrnehmung täglich (Spüren, nicht Yoga) bringt dich zurück.",
    "<strong>Den Grund anschauen:</strong> Die Kontrolle ist kein Charakterzug. Sie ist eine Antwort auf etwas, das damals passiert ist. Das \"damals\" zu bearbeiten ist Session-Arbeit, die am meisten Hebel hat."]}
 };
+
+// WhatsApp-Nummer (international, ohne + und Leerzeichen). Bei Bedarf ändern.
+const WA_NUMBER = '84865978703';
 
 let state={qi:0,counts:{wut:0,leere:0,angst:0,kontrolle:0}};
 
@@ -293,8 +338,31 @@ function showResult(type,firstname){
  document.getElementById('res-title').textContent=r.title;
  document.getElementById('res-desc').textContent=(firstname?firstname+', ':'')+r.desc;
  document.getElementById('res-meaning').innerHTML=r.meaning+(r.meaning_extra?'<br><br>'+r.meaning_extra:'');
+
+ // Pains-List (3 spezifische Pains pro Schatten)
+ const pl=document.getElementById('res-pains');pl.innerHTML='';
+ if(r.pains){
+  r.pains.forEach(p=>{
+   const li=document.createElement('li');
+   li.style.cssText='color:var(--white-muted);font-size:15px;line-height:1.5;padding-left:22px;position:relative';
+   li.innerHTML='<span style="position:absolute;left:0;top:0;color:var(--ember)">→</span>'+p;
+   pl.appendChild(li);
+  });
+ }
+
+ // Social-Validation + Time-Bound
+ document.getElementById('res-social').textContent='Kostenlose erste Sessions aktuell ~3-5 Tage Vorlauf. Wenn du jetzt buchst, sehen wir uns innerhalb dieser Woche.';
+
+ // Steps
  const ol=document.getElementById('res-steps');ol.innerHTML='';
  r.steps.forEach(s=>{const li=document.createElement('li');li.innerHTML=s;li.style.marginBottom='12px';ol.appendChild(li)});
+
+ // WhatsApp-CTA mit Schatten-spezifischer Pre-Filled-Message
+ const waMsg=r.wa_msg||'Hi Jurek, ich komme vom Selbsttest. Hätte gern kurz Kontakt.';
+ const waHref='https://wa.me/'+WA_NUMBER+'?text='+encodeURIComponent(waMsg);
+ const waBtn=document.getElementById('res-wa-btn');
+ if(waBtn) waBtn.setAttribute('href', waHref);
+
  // Persist result so user can share / return via URL
  try { window.history.replaceState({}, '', '?type='+type); } catch(_) {}
  window.scrollTo({top:0,behavior:'smooth'});

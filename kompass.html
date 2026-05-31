@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Der persönliche Emotionale Meisterschaft Kompass. Beantworte 6 Fragen und erhalte ein persönliches Video von Jurek, das dir zeigt, wie du deine Themen löst.">
-    <title>Dein persönlicher Kompass | Emotionale Meisterschaft</title>
+    <meta name="description" content="Schilder Jurek kurz dein Thema. Er liest deine Antworten persönlich und schickt dir ein Video mit einer ehrlichen Einordnung und deinem nächsten Schritt.">
+    <title>Dein persönliches Video von Jurek</title>
 
-    <meta property="og:title" content="Dein persönliches Video von Jurek – kostenlos">
-    <meta property="og:description" content="Beantworte 6 Fragen. Ich schau mir deine Antworten persönlich an und schicke dir ein Video, das auf DEINE Situation zugeschnitten ist.">
+    <meta property="og:title" content="Schilder Jurek kurz dein Thema">
+    <meta property="og:description" content="Kein Test, keine Automatisierung: Jurek liest deine Antworten und antwortet dir persönlich per Video.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://neujahr.emotionalemeisterschaft.com/jurek-profil.jpg">
 
@@ -57,8 +57,8 @@
             content: '';
             position: fixed; inset: 0;
             background-image:
-                radial-gradient(ellipse at top left, rgba(212, 168, 67, 0.08) 0%, transparent 50%),
-                radial-gradient(ellipse at bottom right, rgba(212, 168, 67, 0.05) 0%, transparent 50%);
+                linear-gradient(180deg, rgba(212, 168, 67, 0.06) 0%, transparent 34%),
+                linear-gradient(135deg, rgba(255, 255, 255, 0.035) 0%, transparent 42%);
             pointer-events: none; z-index: 0;
         }
 
@@ -174,8 +174,34 @@
             font-size: 17px;
             color: var(--white-muted);
             max-width: 500px;
-            margin: 0 auto 32px;
+            margin: 0 auto 26px;
             line-height: 1.55;
+        }
+        .intro-flow {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            max-width: 520px;
+            margin: 0 auto 24px;
+        }
+        .flow-step {
+            padding: 12px 10px;
+            border-top: 1px solid var(--card-border);
+            text-align: left;
+        }
+        .flow-step strong {
+            display: block;
+            color: var(--white);
+            font-size: 13px;
+            font-weight: 650;
+            line-height: 1.25;
+            margin-bottom: 3px;
+        }
+        .flow-step span {
+            display: block;
+            color: var(--white-dim);
+            font-size: 12px;
+            line-height: 1.35;
         }
         .intro-promise {
             padding: 20px 22px;
@@ -388,6 +414,18 @@
             margin-bottom: -8px;
             font-weight: 500;
         }
+        .long-answer-wrap { margin-bottom: 28px; }
+        .long-answer {
+            min-height: 156px;
+            resize: vertical;
+            line-height: 1.55;
+        }
+        .field-hint {
+            font-size: 12px;
+            color: var(--white-dim);
+            margin-top: -8px;
+            line-height: 1.45;
+        }
 
         /* Buttons */
         .btn {
@@ -404,6 +442,7 @@
             color: #1a0e00;
             cursor: pointer;
             font-family: inherit;
+            text-decoration: none;
             transition: all 0.2s;
             width: 100%;
             letter-spacing: 0.01em;
@@ -433,6 +472,13 @@
             box-shadow: none;
             transform: none;
         }
+        .direct-book-note {
+            font-size: 12px;
+            color: var(--white-dim);
+            line-height: 1.5;
+            margin: -2px 0 4px;
+            text-align: center;
+        }
 
         .button-row {
             margin-top: auto;
@@ -440,6 +486,12 @@
             display: flex;
             flex-direction: column;
             gap: 10px;
+        }
+        .intro .button-row {
+            width: 100%;
+            max-width: 520px;
+            margin: 0 auto 24px;
+            padding-top: 0;
         }
         .back-link {
             background: transparent;
@@ -556,18 +608,28 @@
 
         @media (max-width: 480px) {
             .wrap { padding: 20px 16px 32px; }
+            .intro { padding-top: 12px; justify-content: flex-start; }
+            .intro-headline { font-size: clamp(34px, 11vw, 44px); }
+            .intro-flow { grid-template-columns: 1fr; gap: 0; }
+            .flow-step { padding: 10px 0; }
             .intro-promise { flex-direction: column; text-align: center; }
             .intro-trust { gap: 14px; }
             .option { padding: 16px; font-size: 14px; }
             .btn { padding: 16px 24px; }
         }
     </style>
+    <!-- Plausible Analytics — cookieless, GDPR-safe, EU-hosted -->
+    <script defer data-domain="neujahr.emotionalemeisterschaft.com"
+            src="https://plausible.io/js/script.tagged-events.outbound-links.js"></script>
+    <script>
+      window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) };
+    </script>
 </head>
 <body>
 <div class="wrap">
     <!-- Topbar -->
     <div class="topbar">
-        <div class="brand">Emotionale Meisterschaft</div>
+        <div class="brand">Jurek</div>
         <div class="step-indicator" id="stepIndicator">&nbsp;</div>
     </div>
 
@@ -577,13 +639,38 @@
     <!-- INTRO SCREEN -->
     <div class="screen active" id="screen-intro">
         <div class="intro">
-            <div class="intro-badge">Kostenlos · Persönlich</div>
-            <h1 class="intro-headline">Dein persönliches <em>Video</em> von Jurek.</h1>
+            <div class="intro-badge">Kostenlos · Jurek liest selbst</div>
+            <h1 class="intro-headline">Schilder mir kurz dein <em>Thema</em>.</h1>
             <p class="intro-sub">
-                Beantworte 6 kurze Fragen.
-                Ich schau mir deine Antworten persönlich an und nehme ein Video für DICH auf —
-                mit konkreten Schritten, wie du deine Themen löst.
+                Kein Test. Keine Diagnose. Du erzählst mir, was gerade wirklich los ist —
+                ich antworte dir persönlich per Video mit einer ehrlichen Einordnung und einem nächsten Schritt.
             </p>
+
+            <div class="intro-flow">
+                <div class="flow-step">
+                    <strong>1. Thema schildern</strong>
+                    <span>2–5 Sätze reichen.</span>
+                </div>
+                <div class="flow-step">
+                    <strong>2. Ich schaue drauf</strong>
+                    <span>Persönlich, nicht automatisch.</span>
+                </div>
+                <div class="flow-step">
+                    <strong>3. Video bekommen</strong>
+                    <span>Mit konkreter Richtung.</span>
+                </div>
+            </div>
+
+            <div class="button-row">
+                <button class="btn" onclick="startFlow()">
+                    Thema schildern
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </button>
+                <p class="direct-book-note">Wenn du direkt mit mir arbeiten willst:</p>
+                <a class="btn btn-ghost" href="https://calendly.com/jurekwit/session-mit-jurek" target="_blank" rel="noopener" onclick="trackCalendlyClick('kompass_intro_direct')">
+                    Kostenlose erste Session buchen
+                </a>
+            </div>
 
             <div class="intro-promise">
                 <div class="intro-profile">
@@ -591,15 +678,15 @@
                 </div>
                 <div class="intro-promise-text">
                     <strong>Jurek Witscherkowsky</strong>
-                    „Jede Woche nehme ich max. 10 Videos auf — persönlich, ehrlich,
-                    direkt auf deine Situation zugeschnitten. Keine Automatisierung."
+                    HP Psychotherapie · 4.800+ Sessions. Ich nehme jede Woche nur eine begrenzte Anzahl
+                    persönlicher Videos auf, damit ich wirklich hinschauen kann.
                 </div>
             </div>
 
             <div class="intro-trust">
                 <div class="trust-item">
                     <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                    ca. 3 Minuten
+                    ca. 4 Minuten
                 </div>
                 <div class="trust-item">
                     <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
@@ -607,15 +694,8 @@
                 </div>
                 <div class="trust-item">
                     <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    Antwort in &lt; 24h
+                    meist &lt; 24h
                 </div>
-            </div>
-
-            <div class="button-row">
-                <button class="btn" onclick="startFlow()">
-                    Los geht's
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-                </button>
             </div>
         </div>
     </div>
@@ -641,22 +721,26 @@
     <!-- CONTACT SCREEN -->
     <div class="screen" id="screen-contact">
         <div class="question-wrap">
-            <h2 class="question-title">Wohin soll ich dein <em style="font-style:italic;color:var(--gold);">Video</em> schicken?</h2>
-            <p class="question-subtitle">In &lt; 24h bekommst du ein persönliches Video von mir, das auf deine Antworten eingeht.</p>
+            <h2 class="question-title">Wohin soll ich dir <em style="font-style:italic;color:var(--gold);">antworten</em>?</h2>
+            <p class="question-subtitle">Ich schicke dir den Videolink per Mail. Wenn es dringend oder sehr persönlich ist, kannst du optional WhatsApp dazuschreiben.</p>
 
             <form id="submitForm" class="input-group" onsubmit="submitForm(event)">
                 <label class="input-label">Dein Vorname</label>
-                <input type="text" class="input-field" name="vorname" id="fieldVorname" placeholder="z.B. Markus" required>
+                <input type="text" class="input-field" name="vorname" id="fieldVorname" placeholder="z.B. Max" required>
 
                 <label class="input-label">Deine E-Mail-Adresse</label>
                 <input type="email" class="input-field" name="email" id="fieldEmail" placeholder="deine@email.de" required>
 
-                <label class="input-label">Optional: Was du mir noch sagen willst</label>
-                <textarea class="input-field" name="nachricht" id="fieldNachricht" placeholder="Nur wenn du magst — z.B. worum es konkret geht" rows="3" style="resize:vertical;font-family:inherit;"></textarea>
+                <label class="input-label">Optional: WhatsApp</label>
+                <input type="tel" class="input-field" name="whatsapp" id="fieldWhatsApp" placeholder="+49 ..." autocomplete="tel">
+                <p class="field-hint">Nur falls ich dir dort leichter antworten soll.</p>
+
+                <label class="input-label">Optional: Was ich zusätzlich wissen sollte</label>
+                <textarea class="input-field" name="nachricht" id="fieldNachricht" placeholder="Nur wenn noch etwas Wichtiges fehlt." rows="3" style="resize:vertical;font-family:inherit;"></textarea>
 
                 <div class="button-row">
                     <button type="submit" class="btn" id="submitBtn">
-                        Video anfordern
+                        Persönliches Video anfordern
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2L15 22 11 13 2 9 22 2z"/></svg>
                     </button>
                     <button type="button" class="back-link" onclick="prevQuestion()">← Zurück</button>
@@ -664,8 +748,7 @@
             </form>
 
             <p class="footer-note">
-                Deine Daten werden nur für das Video verwendet.
-                Kein Newsletter-Spam. Kein Weitergeben.
+                Deine Angaben verwende ich nur für diese Antwort. Kein Newsletter-Spam. Kein Weitergeben.
             </p>
         </div>
     </div>
@@ -681,7 +764,7 @@
             <h2 class="thanks-title">Hab ich. <em>Danke.</em></h2>
             <p class="thanks-text">
                 Deine Antworten sind angekommen. Ich schaue sie mir persönlich an
-                und nehme dein Video in den nächsten <strong style="color:var(--gold);">24 Stunden</strong> auf.
+                und nehme dir ein Video auf — meistens innerhalb von <strong style="color:var(--gold);">24 Stunden</strong>.
             </p>
 
             <div class="thanks-next">
@@ -689,19 +772,19 @@
                 <div class="thanks-step">
                     <div class="thanks-step-num">1</div>
                     <div class="thanks-step-text">
-                        <strong>Ich lese deine Antworten</strong> — keine KI, keine Automatisierung.
+                        <strong>Ich lese deine Antworten</strong> und achte darauf, was hinter dem offensichtlichen Problem liegen könnte.
                     </div>
                 </div>
                 <div class="thanks-step">
                     <div class="thanks-step-num">2</div>
                     <div class="thanks-step-text">
-                        <strong>Ich nehme ein Video für DICH auf</strong> (5–10 Min) mit konkreten nächsten Schritten.
+                        <strong>Ich nehme ein Video für dich auf</strong> mit Einordnung, möglichem Muster und einem nächsten Schritt.
                     </div>
                 </div>
                 <div class="thanks-step">
                     <div class="thanks-step-num">3</div>
                     <div class="thanks-step-text">
-                        <strong>Du bekommst den Link per E-Mail</strong> innerhalb von 24 Stunden.
+                        <strong>Du bekommst den Link per E-Mail</strong>. Wenn ein Gespräch sinnvoll ist, sage ich dir das klar.
                     </div>
                 </div>
             </div>
@@ -709,6 +792,12 @@
             <p class="footer-note" style="margin-top:0;">
                 Schau auch in deinen Spam-Ordner, falls nichts ankommt.
             </p>
+
+            <div class="button-row" style="margin-top:24px;">
+                <a class="btn" href="https://calendly.com/jurekwit/session-mit-jurek" target="_blank" rel="noopener" onclick="trackCalendlyClick('kompass_thanks_direct')">
+                    Kostenlose erste Session buchen
+                </a>
+            </div>
         </div>
     </div>
 </div>
@@ -719,8 +808,17 @@
 // ============ QUESTIONS ============
 const QUESTIONS = [
     {
+        id: 'situation',
+        title: 'Was ist gerade dein <em style="font-style:italic;color:var(--gold);">Thema</em>?',
+        subtitle: 'Schreib es so, wie du es einem Menschen erzählen würdest. 2–5 Sätze reichen.',
+        type: 'text',
+        minLength: 20,
+        placeholder: 'z.B. Ich ziehe mich immer zurück, obwohl ich eigentlich Nähe will. Danach schäme ich mich und weiß nicht, warum ich so reagiere.'
+    },
+    {
         id: 'thema',
-        title: 'Was beschäftigt dich gerade am <em style="font-style:italic;color:var(--gold);">meisten</em>?',
+        title: 'Worum geht es am ehesten?',
+        subtitle: 'Eine grobe Richtung reicht. Ich lese danach deinen Text.',
         type: 'single',
         options: [
             { key: 'leer',         label: 'Ich fühle mich innerlich leer oder abgetrennt' },
@@ -769,27 +867,16 @@ const QUESTIONS = [
         ]
     },
     {
-        id: 'wunsch',
-        title: 'Was <em style="font-style:italic;color:var(--gold);">wünschst</em> du dir am meisten?',
+        id: 'naechster_schritt',
+        title: 'Was wäre jetzt am <em style="font-style:italic;color:var(--gold);">hilfreichsten</em>?',
         type: 'single',
         options: [
-            { key: 'verstehen',    label: 'Endlich verstehen, warum ich so reagiere' },
-            { key: 'heilen',       label: 'Alte Wunden heilen' },
-            { key: 'annehmen',     label: 'Mich selbst annehmen können' },
-            { key: 'beziehungen',  label: 'Bessere Beziehungen führen' },
-            { key: 'frieden',      label: 'Inneren Frieden finden' },
-            { key: 'lebensfreude', label: 'Wieder Lebensfreude spüren' },
-        ]
-    },
-    {
-        id: 'bereit',
-        title: 'Wie <em style="font-style:italic;color:var(--gold);">bereit</em> bist du, das anzugehen?',
-        type: 'single',
-        options: [
-            { key: 'neugierig',  label: 'Neugierig, aber noch unsicher' },
-            { key: 'vorsichtig', label: 'Bereit, aber vorsichtig' },
-            { key: 'bereit',     label: 'Ich will endlich etwas ändern' },
-            { key: 'limit',      label: 'Ich bin am Limit — ich brauche jetzt Hilfe' },
+            { key: 'einordnung', label: 'Eine ehrliche Einordnung von außen' },
+            { key: 'muster',     label: 'Verstehen, welches Muster dahinter liegt' },
+            { key: 'schritt',    label: 'Ein konkreter nächster Schritt' },
+            { key: 'session',    label: 'Eine kostenlose erste Session mit Jurek' },
+            { key: 'app',        label: 'Passende Videos / Meditationen zum Weitergehen' },
+            { key: 'unklar',     label: 'Ich weiß es nicht — ich will erstmal sortieren' },
         ]
     }
 ];
@@ -797,6 +884,15 @@ const QUESTIONS = [
 const TOTAL_STEPS = QUESTIONS.length + 1;
 let currentIdx = 0;
 const answers = {};
+
+function trackCalendlyClick(source) {
+    if (window.plausible) plausible('Calendly Click', { props: { source } });
+}
+
+function getTrafficSource() {
+    const params = new URLSearchParams(window.location.search);
+    return params.get('utm_source') || params.get('src') || params.get('source') || document.referrer || 'direct';
+}
 
 // ============ NAVIGATION ============
 function showScreen(id) {
@@ -856,6 +952,19 @@ function renderQuestion() {
             };
             container.appendChild(btn);
         });
+    } else if (q.type === 'text') {
+        container.className = 'long-answer-wrap';
+        const textarea = document.createElement('textarea');
+        textarea.className = 'input-field long-answer';
+        textarea.rows = 6;
+        textarea.placeholder = q.placeholder || '';
+        textarea.value = answers[q.id] || '';
+        textarea.oninput = () => {
+            answers[q.id] = textarea.value.trim();
+            updateNextBtn();
+        };
+        container.appendChild(textarea);
+        setTimeout(() => textarea.focus(), 80);
     } else if (q.type === 'scale') {
         container.className = 'scale';
         q.options.forEach(opt => {
@@ -911,6 +1020,7 @@ function updateNextBtn() {
     if (!q) return;
     let valid;
     if (q.type === 'multi') valid = true;
+    else if (q.type === 'text') valid = ((answers[q.id] || '').trim().length >= (q.minLength || 3));
     else valid = !!answers[q.id];
     btn.disabled = !valid;
     btn.innerHTML = (currentIdx === QUESTIONS.length - 1 ? 'Letzter Schritt' : 'Weiter') +
@@ -919,7 +1029,8 @@ function updateNextBtn() {
 
 function nextQuestion() {
     const q = QUESTIONS[currentIdx];
-    if (q.type !== 'multi' && !answers[q.id]) return;
+    if (q.type === 'text' && ((answers[q.id] || '').trim().length < (q.minLength || 3))) return;
+    if (q.type !== 'multi' && q.type !== 'text' && !answers[q.id]) return;
     currentIdx++;
     if (currentIdx >= QUESTIONS.length) showContact();
     else renderQuestion();
@@ -952,6 +1063,10 @@ function summarizeAnswers() {
     QUESTIONS.forEach(q => {
         const a = answers[q.id];
         if (!a || (Array.isArray(a) && a.length === 0)) { out.push('• ' + stripHtml(q.title) + ': (keine Angabe)'); return; }
+        if (q.type === 'text') {
+            out.push('• ' + stripHtml(q.title) + ':\n  ' + a);
+            return;
+        }
         if (Array.isArray(a)) {
             const labels = a.map(k => {
                 const opt = q.options.find(o => o.key === k);
@@ -980,6 +1095,7 @@ async function submitForm(e) {
 
     const vorname = document.getElementById('fieldVorname').value.trim();
     const email = document.getElementById('fieldEmail').value.trim();
+    const whatsapp = document.getElementById('fieldWhatsApp').value.trim();
     const nachricht = document.getElementById('fieldNachricht').value.trim();
 
     const zusammenfassung = summarizeAnswers();
@@ -989,10 +1105,11 @@ async function submitForm(e) {
         _captcha: 'false',
         Vorname: vorname,
         Email: email,
+        WhatsApp: whatsapp || '(keine)',
         Nachricht: nachricht || '(keine)',
         Zusammenfassung: zusammenfassung,
         ...Object.fromEntries(QUESTIONS.map(q => [q.id, Array.isArray(answers[q.id]) ? (answers[q.id] || []).join(', ') : (answers[q.id] || '')])),
-        Quelle: document.referrer || 'direct',
+        Quelle: getTrafficSource(),
         Gesendet: new Date().toLocaleString('de-DE')
     };
 
@@ -1011,6 +1128,7 @@ async function submitForm(e) {
         document.getElementById('progressFill').style.width = '100%';
 
         // Analytics event (if available)
+        if (window.plausible) plausible('Kompass Submit', { props: { source: getTrafficSource() } });
         if (window.gtag) gtag('event', 'kompass_submit', { event_category: 'lead' });
         if (window.fbq) fbq('track', 'Lead');
     } catch (err) {
