@@ -863,40 +863,47 @@ const QUESTIONS = [
         ]
     },
     {
-        id: 'belastung',
-        title: 'Wie <em style="font-style:italic;color:var(--gold);">stark</em> belastet dich das?',
-        type: 'scale',
-        options: [
-            { key: '1', emoji: '😌', label: 'Kaum merkbar' },
-            { key: '2', emoji: '😐', label: 'Spürbar, aber ich komme zurecht' },
-            { key: '3', emoji: '😔', label: 'Belastet mich deutlich' },
-            { key: '4', emoji: '😣', label: 'Bestimmt meinen Alltag' },
-        ]
-    },
-    {
-        id: 'dauer',
-        title: 'Seit wann begleitet dich das?',
+        id: 'bereich',
+        title: 'Wo zeigt sich das Thema am deutlichsten?',
+        subtitle: 'Wähl den Bereich, in dem es sich am klarsten zeigt.',
         type: 'single',
         options: [
-            { key: 'wochen', label: 'Seit kurzem (Wochen)' },
-            { key: 'monate', label: 'Seit einigen Monaten' },
-            { key: 'jahr',   label: 'Seit über einem Jahr' },
-            { key: 'immer',  label: 'Schon mein ganzes Leben lang' },
+            { key: 'partnerschaft', label: 'In Beziehung, Dating oder Nähe' },
+            { key: 'familie',       label: 'In Familie, Kindheit oder Eltern-Themen' },
+            { key: 'selbstbild',    label: 'Im Selbstbild: Scham, Schuld, innerer Kritiker' },
+            { key: 'koerper',       label: 'Im Körper: Anspannung, Druck, Panik, Enge' },
+            { key: 'leistung',      label: 'Bei Arbeit, Leistung, Geld oder Verantwortung' },
+            { key: 'orientierung',  label: 'In Sinn, Leere oder innerer Orientierung' },
         ]
     },
     {
-        id: 'versucht',
-        title: 'Was hast du schon probiert?',
-        subtitle: 'Mehrfach-Auswahl möglich — oder überspringen.',
+        id: 'muster',
+        title: 'Was passiert dann typischerweise?',
+        subtitle: 'Wähl das Muster, das du bei dir am klarsten erkennst.',
+        type: 'single',
+        options: [
+            { key: 'rueckzug',     label: 'Ich ziehe mich zurück oder mache innerlich zu' },
+            { key: 'anpassen',     label: 'Ich passe mich an und verliere mich selbst' },
+            { key: 'kontrolle',    label: 'Ich kontrolliere, plane oder suche Sicherheit' },
+            { key: 'explodieren',  label: 'Ich werde hart, laut oder verletzend' },
+            { key: 'gruebeln',     label: 'Ich grüble, analysiere und komme nicht raus' },
+            { key: 'betaeuben',    label: 'Ich lenke mich ab oder betäube mich' },
+        ]
+    },
+    {
+        id: 'kern',
+        title: 'Was könnte darunter liegen?',
+        subtitle: 'Mehrfach-Auswahl möglich. Nimm nur das, was wirklich resoniert.',
         type: 'multi',
         options: [
-            { key: 'nichts',   label: 'Noch nichts' },
-            { key: 'buecher',  label: 'Bücher / Podcasts' },
-            { key: 'therapie', label: 'Therapie' },
-            { key: 'coach',    label: 'Coaching' },
-            { key: 'medi',     label: 'Meditation' },
-            { key: 'reden',    label: 'Mit Freunden reden' },
-            { key: 'kreis',    label: 'Dreh mich im Kreis' },
+            { key: 'naehe-angst',        label: 'Angst vor Nähe' },
+            { key: 'verlassenwerden',    label: 'Angst, verlassen zu werden' },
+            { key: 'scham',              label: 'Scham / nicht gut genug sein' },
+            { key: 'grenzen',            label: 'Wut oder fehlende Grenzen' },
+            { key: 'trauer',             label: 'Trauer / Verlust / Enttäuschung' },
+            { key: 'inneres-kind',       label: 'Inneres Kind / alte Verletzung' },
+            { key: 'kontrolle-loslassen',label: 'Kontrolle nicht loslassen können' },
+            { key: 'unklar',             label: 'Ich weiß es nicht genau' },
         ]
     },
     {
@@ -918,7 +925,7 @@ const QUESTIONS = [
         subtitle: 'Optional. Wenn du willst, schreib 1–3 Sätze dazu. Sonst direkt weiter.',
         type: 'text',
         optional: true,
-        placeholder: 'z.B. wann es meistens passiert, mit wem, was du dann fühlst oder was du dir von meiner Antwort wünschst.'
+        placeholder: 'z.B. welche Situation typisch ist, was du dann tust, was du nicht verstehst oder was du dir von meiner Antwort wünschst.'
     }
 ];
 
