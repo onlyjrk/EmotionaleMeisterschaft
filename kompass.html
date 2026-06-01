@@ -918,6 +918,7 @@ const QUESTIONS = [
         title: 'Was könnte darunter liegen?',
         subtitle: 'Mehrfach-Auswahl möglich. Nimm nur das, was wirklich resoniert.',
         type: 'multi',
+        optional: true,
         options: [
             { key: 'naehe-angst',        label: 'Angst vor Nähe' },
             { key: 'verlassenwerden',    label: 'Angst, verlassen zu werden' },
@@ -931,14 +932,19 @@ const QUESTIONS = [
     },
     {
         id: 'erfahrung',
-        title: 'Wie erfahren würdest du dich selbst einschätzen?',
-        subtitle: 'So kann ich meine Antwort besser auf deinen Stand abstimmen.',
-        type: 'scale',
+        title: 'Welche Erfahrungen bringst du schon mit?',
+        subtitle: 'Mehrfach-Auswahl möglich. Wähl alles, was ungefähr passt.',
+        type: 'multi',
         options: [
-            { key: 'neu',             emoji: '○', label: 'Ganz neu - ich fange gerade erst an' },
-            { key: 'erste_erfahrung', emoji: '◔', label: 'Etwas Erfahrung - ich habe mich schon damit beschäftigt' },
-            { key: 'erfahren',        emoji: '◑', label: 'Erfahren - ich kenne meine Muster schon recht gut' },
-            { key: 'sehr_erfahren',   emoji: '●', label: 'Sehr erfahren - ich arbeite schon länger bewusst damit' },
+            { key: 'neu_unter_6_monate',                 label: 'Noch eher neu damit (unter 6 Monate)' },
+            { key: 'therapie_6_bis_24_monate',           label: 'Therapie-Erfahrung (6-24 Monate)' },
+            { key: 'therapie_2_plus_jahre',              label: 'Langjährige Therapie-Erfahrung (2+ Jahre)' },
+            { key: 'meditation_6_bis_24_monate',         label: 'Meditation / Achtsamkeit (6-24 Monate)' },
+            { key: 'meditation_2_plus_jahre',            label: 'Langjährige Meditationspraxis (2+ Jahre)' },
+            { key: 'persoenlichkeitsentwicklung_6_bis_24_monate', label: 'Persönlichkeitsentwicklung / innere Arbeit (6-24 Monate)' },
+            { key: 'persoenlichkeitsentwicklung_2_plus_jahre',    label: 'Persönlichkeitsentwicklung / innere Arbeit (2+ Jahre)' },
+            { key: 'events_retreats_mehrere',            label: 'Mehrere Consciousness-, Retreat- oder schamanische Events besucht (über Monate/Jahre)' },
+            { key: 'gemischt_unklar',                    label: 'Gemischt / schwer einzuschätzen' },
         ]
     },
     {
@@ -1100,7 +1106,7 @@ function renderQuestion() {
 
     updateNextBtn();
     const skipHint = document.getElementById('qSkipHint');
-    if (q.type === 'multi') {
+    if (q.type === 'multi' && q.optional) {
         skipHint.style.display = 'block';
         skipHint.textContent = 'Optional — du kannst diese Frage auch überspringen';
     } else if (q.optional) {
@@ -1116,7 +1122,7 @@ function updateNextBtn() {
     const btn = document.getElementById('qNextBtn');
     if (!q) return;
     let valid;
-    if (q.type === 'multi') valid = true;
+    if (q.type === 'multi') valid = q.optional ? true : ((answers[q.id] || []).length > 0);
     else if (q.type === 'text') valid = q.optional ? true : ((answers[q.id] || '').trim().length >= (q.minLength || 3));
     else valid = !!answers[q.id];
     btn.disabled = !valid;
