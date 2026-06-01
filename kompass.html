@@ -930,6 +930,18 @@ const QUESTIONS = [
         ]
     },
     {
+        id: 'erfahrung',
+        title: 'Wie erfahren würdest du dich selbst einschätzen?',
+        subtitle: 'So kann ich meine Antwort besser auf deinen Stand abstimmen.',
+        type: 'scale',
+        options: [
+            { key: 'neu',             emoji: '○', label: 'Ganz neu - ich fange gerade erst an' },
+            { key: 'erste_erfahrung', emoji: '◔', label: 'Etwas Erfahrung - ich habe mich schon damit beschäftigt' },
+            { key: 'erfahren',        emoji: '◑', label: 'Erfahren - ich kenne meine Muster schon recht gut' },
+            { key: 'sehr_erfahren',   emoji: '●', label: 'Sehr erfahren - ich arbeite schon länger bewusst damit' },
+        ]
+    },
+    {
         id: 'naechster_schritt',
         title: 'Was wäre jetzt am <em style="font-style:italic;color:var(--gold);">hilfreichsten</em>?',
         type: 'single',
